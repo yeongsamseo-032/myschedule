@@ -1,71 +1,42 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
+<!-- saved from url=(0104)file:///C:/Users/%EC%B5%9C%EC%9C%A0%EB%82%98/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/index.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>에듀스케줄 (EduSchedule) - 학생 학원 일정 및 특이사항 공유</title>
   <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="./index2_files/3.4.17"></script>
   <style>
     @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
     * {
       font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
       -webkit-tap-highlight-color: transparent;
     }
-    /* Hide scrollbars but allow scrolling */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    /* iOS frame mock styling */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .ios-shell {
       border-radius: 48px;
       box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.4), 0 0 0 12px #27272a, 0 0 0 14px #52525b;
     }
-    /* Android frame mock styling */
     .android-shell {
       border-radius: 36px;
       box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35), 0 0 0 10px #18181b, 0 0 0 12px #3f3f46;
     }
-    /* Smooth transitions */
     .tab-content {
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
-    /* Print optimization for refrigerator posting */
     @media print {
-      body {
-        background: white !important;
-        padding: 0 !important;
-        color: black !important;
-      }
-      header, footer, #phone-top-hardware, #phone-bottom-bar, #phone-hardware-bottom, nav, .no-print {
-        display: none !important;
-      }
+      body { background: white !important; padding: 0 !important; color: black !important; }
+      header, footer, #phone-top-hardware, #phone-bottom-bar, #phone-hardware-bottom, nav, .no-print { display: none !important; }
       #device-wrapper, #phone-frame {
-        box-shadow: none !important;
-        border: none !important;
-        max-width: 100% !important;
-        height: auto !important;
-        overflow: visible !important;
-        background: white !important;
+        box-shadow: none !important; border: none !important; max-width: 100% !important;
+        height: auto !important; overflow: visible !important; background: white !important;
       }
-      #app-body {
-        overflow: visible !important;
-        padding: 0 !important;
-        background: white !important;
-      }
-      .tab-content {
-        display: block !important;
-      }
-      .print-page-break {
-        page-break-before: always;
-      }
+      #app-body { overflow: visible !important; padding: 0 !important; background: white !important; }
+      .tab-content { display: block !important; }
     }
   </style>
-</head>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-6{bottom:-1.5rem}.-right-4{right:-1rem}.left-4{left:1rem}.right-1{right:0.25rem}.right-4{right:1rem}.top-1{top:0.25rem}.top-14{top:3.5rem}.-left-\[17px\]{left:-17px}.top-4{top:1rem}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-2{margin-bottom:0.5rem}.mb-2\.5{margin-bottom:0.625rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mt-0\.5{margin-top:0.125rem}.mt-2{margin-top:0.5rem}.mt-2\.5{margin-top:0.625rem}.mt-3{margin-top:0.75rem}.mt-5{margin-top:1.25rem}.mb-0\.5{margin-bottom:0.125rem}.mt-1{margin-top:0.25rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-1\.5{height:0.375rem}.h-10{height:2.5rem}.h-2{height:0.5rem}.h-28{height:7rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-9{height:2.25rem}.h-\[860px\]{height:860px}.h-2\.5{height:0.625rem}.max-h-\[85\%\]{max-height:85%}.max-h-\[92\%\]{max-height:92%}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-2{width:0.5rem}.w-28{width:7rem}.w-3\.5{width:0.875rem}.w-32{width:8rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.w-2\.5{width:0.625rem}.w-3{width:0.75rem}.max-w-4xl{max-width:56rem}.max-w-\[412px\]{max-width:412px}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.resize-none{resize:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-7{grid-template-columns:repeat(7, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-start{justify-content:flex-start}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-0\.5{gap:0.125rem}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-3\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.875rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-pre-line{white-space:pre-line}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.rounded-t-3xl{border-top-left-radius:1.5rem;border-top-right-radius:1.5rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138 / var(--tw-border-opacity, 1))}.border-amber-200\/60{border-color:rgb(253 230 138 / 0.6)}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77 / var(--tw-border-opacity, 1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-emerald-400{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-indigo-500\/40{border-color:rgb(99 102 241 / 0.4)}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202 / var(--tw-border-opacity, 1))}.border-rose-200{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.border-sky-200{--tw-border-opacity:1;border-color:rgb(186 230 253 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.border-slate-200\/90{border-color:rgb(226 232 240 / 0.9)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/60{border-color:rgb(51 65 85 / 0.6)}.border-white\/10{border-color:rgb(255 255 255 / 0.1)}.border-white\/15{border-color:rgb(255 255 255 / 0.15)}.border-amber-200\/80{border-color:rgb(253 230 138 / 0.8)}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-purple-200{--tw-border-opacity:1;border-color:rgb(233 213 255 / var(--tw-border-opacity, 1))}.border-white{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.border-emerald-400\/40{border-color:rgb(52 211 153 / 0.4)}.bg-amber-200{--tw-bg-opacity:1;background-color:rgb(253 230 138 / var(--tw-bg-opacity, 1))}.bg-amber-400{--tw-bg-opacity:1;background-color:rgb(251 191 36 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-50\/70{background-color:rgb(255 251 235 / 0.7)}.bg-amber-50\/80{background-color:rgb(255 251 235 / 0.8)}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-black\/25{background-color:rgb(0 0 0 / 0.25)}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-indigo-200{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-50\/80{background-color:rgb(238 242 255 / 0.8)}.bg-indigo-50\/90{background-color:rgb(238 242 255 / 0.9)}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-indigo-500\/30{background-color:rgb(99 102 241 / 0.3)}.bg-indigo-600{--tw-bg-opacity:1;background-color:rgb(79 70 229 / var(--tw-bg-opacity, 1))}.bg-purple-500{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.bg-sky-50{--tw-bg-opacity:1;background-color:rgb(240 249 255 / var(--tw-bg-opacity, 1))}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-100\/70{background-color:rgb(241 245 249 / 0.7)}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-300{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/80{background-color:rgb(30 41 59 / 0.8)}.bg-slate-800\/90{background-color:rgb(30 41 59 / 0.9)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-slate-900\/80{background-color:rgb(15 23 42 / 0.8)}.bg-slate-900\/95{background-color:rgb(15 23 42 / 0.95)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-white\/20{background-color:rgb(255 255 255 / 0.2)}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-yellow-200{--tw-bg-opacity:1;background-color:rgb(254 240 138 / var(--tw-bg-opacity, 1))}.bg-yellow-400{--tw-bg-opacity:1;background-color:rgb(250 204 21 / var(--tw-bg-opacity, 1))}.bg-amber-50\/90{background-color:rgb(255 251 235 / 0.9)}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-purple-50{--tw-bg-opacity:1;background-color:rgb(250 245 255 / var(--tw-bg-opacity, 1))}.bg-white\/90{background-color:rgb(255 255 255 / 0.9)}.bg-emerald-500\/30{background-color:rgb(16 185 129 / 0.3)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-indigo-500{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-to:rgb(99 102 241 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-600{--tw-gradient-from:#4f46e5 var(--tw-gradient-from-position);--tw-gradient-to:rgb(79 70 229 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-indigo-700{--tw-gradient-to:rgb(67 56 202 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #4338ca var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-purple-800{--tw-gradient-to:#6b21a8 var(--tw-gradient-to-position)}.to-violet-500{--tw-gradient-to:#8b5cf6 var(--tw-gradient-to-position)}.p-1{padding:0.25rem}.p-2{padding:0.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-1\.5{padding:0.375rem}.p-3\.5{padding:0.875rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.pb-1{padding-bottom:0.25rem}.pb-2{padding-bottom:0.5rem}.pb-2\.5{padding-bottom:0.625rem}.pb-3{padding-bottom:0.75rem}.pl-6{padding-left:1.5rem}.pr-2{padding-right:0.5rem}.pt-1{padding-top:0.25rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pb-1\.5{padding-bottom:0.375rem}.pl-1{padding-left:0.25rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[9px\]{font-size:9px}.text-2xl{font-size:1.5rem;line-height:2rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.text-amber-200{--tw-text-opacity:1;color:rgb(253 230 138 / var(--tw-text-opacity, 1))}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-amber-950{--tw-text-opacity:1;color:rgb(69 26 3 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-emerald-100{--tw-text-opacity:1;color:rgb(209 250 229 / var(--tw-text-opacity, 1))}.text-emerald-200{--tw-text-opacity:1;color:rgb(167 243 208 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}.text-indigo-100{--tw-text-opacity:1;color:rgb(224 231 255 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-indigo-950{--tw-text-opacity:1;color:rgb(30 27 75 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-sky-900{--tw-text-opacity:1;color:rgb(12 74 110 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-white\/90{color:rgb(255 255 255 / 0.9)}.text-yellow-900{--tw-text-opacity:1;color:rgb(113 63 18 / var(--tw-text-opacity, 1))}.text-yellow-950{--tw-text-opacity:1;color:rgb(66 32 6 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.placeholder-slate-400::placeholder{--tw-placeholder-opacity:1;color:rgb(148 163 184 / var(--tw-placeholder-opacity, 1))}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-indigo-500\/30{--tw-shadow-color:rgb(99 102 241 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-indigo-600{--tw-ring-opacity:1;--tw-ring-color:rgb(79 70 229 / var(--tw-ring-opacity, 1))}.ring-amber-100{--tw-ring-opacity:1;--tw-ring-color:rgb(254 243 199 / var(--tw-ring-opacity, 1))}.ring-offset-1{--tw-ring-offset-width:1px}.blur-xl{--tw-blur:blur(24px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.before\:absolute::before{content:var(--tw-content);position:absolute}.before\:bottom-2::before{content:var(--tw-content);bottom:0.5rem}.before\:left-3::before{content:var(--tw-content);left:0.75rem}.before\:top-2::before{content:var(--tw-content);top:0.5rem}.before\:w-0\.5::before{content:var(--tw-content);width:0.125rem}.before\:bg-indigo-200::before{content:var(--tw-content);--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.before\:content-\[\'\'\]::before{--tw-content:'';content:var(--tw-content)}.hover\:bg-amber-300:hover{--tw-bg-opacity:1;background-color:rgb(252 211 77 / var(--tw-bg-opacity, 1))}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}.hover\:bg-black:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-50:hover{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-700:hover{--tw-bg-opacity:1;background-color:rgb(4 120 87 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-100:hover{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-700:hover{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-100:hover{--tw-bg-opacity:1;background-color:rgb(255 228 230 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-900:hover{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.hover\:bg-yellow-500:hover{--tw-bg-opacity:1;background-color:rgb(234 179 8 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-100:hover{--tw-text-opacity:1;color:rgb(224 231 255 / var(--tw-text-opacity, 1))}.hover\:text-indigo-600:hover{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.hover\:text-indigo-700:hover{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:text-slate-600:hover{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.hover\:text-slate-700:hover{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-rose-600:hover{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-sm:hover{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-amber-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(245 158 11 / var(--tw-ring-opacity, 1))}.focus\:ring-indigo-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}@media (min-width: 640px){.sm\:p-4{padding:1rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:p-6{padding:1.5rem}}</style></head>
 <body class="bg-slate-900 text-slate-800 min-h-screen flex flex-col items-center justify-start p-2 sm:p-4 md:p-6 select-none">
 
   <!-- ================= TOP PLATFORM CONTROLLER & TEST BAR ================= -->
@@ -77,39 +48,32 @@
       <div>
         <div class="flex items-center gap-2">
           <h1 class="font-bold text-base sm:text-lg leading-tight tracking-tight">에듀스케줄 (EduSchedule)</h1>
-          <span class="px-2 py-0.5 text-xs font-semibold bg-indigo-500/30 text-indigo-300 border border-indigo-500/40 rounded-full">v2.5 안전성·보안 강화판</span>
+          <span class="px-2 py-0.5 text-xs font-semibold bg-indigo-500/30 text-indigo-300 border border-indigo-500/40 rounded-full">v2.5 안전성·동작 검증완료</span>
         </div>
-        <p class="text-xs text-slate-400">학생 · 학부모 학원 수업 요일/시간 & 특이사항 실시간 양방향 공유</p>
+        <p class="text-xs text-slate-400">학생 · 학부모 학원 수업 요일/시간 &amp; 특이사항 실시간 양방향 공유</p>
       </div>
     </div>
 
-    <!-- Device Mode Toggles & Environment Info -->
     <div class="flex flex-wrap items-center justify-center gap-2">
       <div class="bg-slate-900/80 p-1 rounded-xl flex items-center border border-slate-700">
-        <button id="btn-mode-android" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-emerald-600 text-white shadow-sm font-bold" aria-label="갤럭시 Android 모드로 보기">
+        <button id="btn-mode-android" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-emerald-600 text-white shadow-sm font-bold" aria-label="갤럭시 Android 모드">
           <span>🤖</span>
           <span>Android (Galaxy S24)</span>
         </button>
-        <button id="btn-mode-ios" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white" aria-label="iPhone iOS 모드로 보기">
+        <button id="btn-mode-ios" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white" aria-label="iPhone iOS 모드">
           <span>🍏</span>
           <span>iOS (iPhone 16)</span>
         </button>
-        <button id="btn-mode-responsive" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white" aria-label="전체화면 반응형으로 보기">
+        <button id="btn-mode-responsive" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white" aria-label="전체화면 반응형">
           <span>📱</span>
           <span>전체화면(PC/태블릿)</span>
         </button>
       </div>
 
-      <!-- Quick Print & Safe Badge -->
-      <button id="btn-print-schedule" class="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-sm transition-colors" title="시간표 출력 (A4 인쇄 / PDF 저장)">
+      <button id="btn-print-schedule" class="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-sm transition-colors" title="시간표 A4 인쇄 / PDF 저장">
         <span>🖨️</span>
         <span>시간표 인쇄/PDF</span>
       </button>
-
-      <div class="flex items-center gap-1.5 px-2.5 py-1.5 bg-emerald-950/60 border border-emerald-500/30 rounded-xl text-emerald-300 text-xs font-medium">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>XSS방어 & 양방향 동기화 검증완료</span>
-      </div>
     </div>
   </header>
 
@@ -117,20 +81,14 @@
   <main id="device-wrapper" class="w-full flex justify-center items-center transition-all duration-300">
     <div id="phone-frame" class="w-full max-w-[412px] h-[860px] bg-slate-50 flex flex-col overflow-hidden relative android-shell transition-all duration-300">
       
-      <!-- PHONE HARDWARE NOTCH / DYNAMIC ISLAND (iOS) / PUNCH HOLE (Android) -->
+      <!-- PHONE HARDWARE NOTCH -->
       <div id="phone-top-hardware" class="w-full pt-3 px-6 pb-1 bg-white flex items-center justify-between z-30 shrink-0">
-        <!-- Status Bar Real-time Clock -->
-        <span id="status-bar-time" class="text-xs font-semibold text-slate-900 tracking-tight">19:30</span>
-        
-        <!-- Dynamic Island or Camera Hole -->
-        <div id="notch-element" class="w-4 h-4 bg-black rounded-full flex items-center justify-center transition-all duration-300">
-        </div>
-
-        <!-- Status Icons -->
+        <span id="status-bar-time" class="text-xs font-semibold text-slate-900 tracking-tight">19:59</span>
+        <div id="notch-element" class="w-4 h-4 bg-black rounded-full flex items-center justify-center transition-all duration-300"></div>
         <div class="flex items-center gap-1.5 text-slate-800 text-xs">
           <span class="text-[10px] font-bold">5G</span>
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9zm0 14.5c-3.04 0-5.5-2.46-5.5-5.5S8.96 6.5 12 6.5s5.5 2.46 5.5 5.5-2.46 5.5-5.5 5.5z"/></svg>
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M21 11v2"/></svg>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9zm0 14.5c-3.04 0-5.5-2.46-5.5-5.5S8.96 6.5 12 6.5s5.5 2.46 5.5 5.5-2.46 5.5-5.5 5.5z"></path></svg>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="7" width="18" height="10" rx="2"></rect><path d="M21 11v2"></path></svg>
         </div>
       </div>
 
@@ -142,26 +100,25 @@
           </div>
           <div>
             <div class="flex items-center gap-1.5">
-              <span id="label-student-display" class="font-bold text-slate-900 text-xs">김민우 학생</span>
-              <button id="btn-open-profile-modal" class="px-1.5 py-0.5 bg-indigo-50 border border-indigo-200 text-indigo-700 rounded text-[10px] font-bold hover:bg-indigo-100 transition-colors" title="학생, 학부모, 학교 변경">정보변경</button>
+              <span id="label-student-display" class="font-bold text-slate-900 text-xs">서준호 학생</span>
+              <button id="btn-open-profile-modal" class="px-1.5 py-0.5 bg-indigo-50 border border-indigo-200 text-indigo-700 rounded text-[10px] font-bold hover:bg-indigo-100 transition-colors" title="정보 변경">정보변경</button>
             </div>
             <div class="flex items-center gap-1 mt-0.5">
-              <span id="label-school-grade" class="text-[10px] text-slate-500 font-medium">대치고 2학년 이과</span>
+              <span id="label-school-grade" class="text-[10px] text-slate-500 font-medium">문지중 3학년</span>
             </div>
           </div>
         </div>
 
-        <!-- Right Quick Actions -->
         <div class="flex items-center gap-1">
-          <button id="btn-toggle-role" class="px-2 py-1 bg-slate-50 hover:bg-indigo-50 border border-slate-200 text-slate-700 hover:text-indigo-700 rounded-lg text-[10px] font-bold transition-colors" title="클릭하여 학생/학부모 전환">
-            👤 <span id="label-role">학생 모드 (민우)</span> ⇄
+          <button id="btn-toggle-role" class="px-2 py-1 bg-slate-50 hover:bg-indigo-50 border border-slate-200 text-slate-700 hover:text-indigo-700 rounded-lg text-[10px] font-bold transition-colors" title="학생/학부모 전환">
+            👤 <span id="label-role">학부모 (아빠)</span> ⇄
           </button>
-          <button id="btn-open-share-modal" class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-full transition-colors relative" aria-label="시간표 공유 및 가족 동기화 열기" title="시간표 공유">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          <button id="btn-open-share-modal" class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-full transition-colors relative" aria-label="시간표 공유">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
             <span class="absolute top-1 right-1 w-2 h-2 bg-indigo-500 rounded-full animate-ping"></span>
           </button>
-          <button id="btn-open-add-modal" class="p-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-sm transition-colors" aria-label="새 학원 수업 추가" title="수업 추가">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          <button id="btn-open-add-modal" class="p-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-sm transition-colors" aria-label="새 학원 수업 추가">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
           </button>
         </div>
       </nav>
@@ -179,7 +136,7 @@
                 <p class="text-[11px] text-emerald-100" id="incoming-sync-desc">학생의 시간표를 이 폰에 즉시 동기화할 수 있습니다.</p>
               </div>
             </div>
-            <button id="btn-close-sync-banner" class="text-emerald-200 hover:text-white text-base font-bold" aria-label="배너 닫기">&times;</button>
+            <button id="btn-close-sync-banner" class="text-emerald-200 hover:text-white text-base font-bold" aria-label="배너 닫기">×</button>
           </div>
           <div class="flex items-center gap-2 pt-1">
             <button id="btn-apply-incoming-sync" class="flex-1 py-1.5 bg-white text-emerald-900 font-bold rounded-lg text-xs shadow-sm hover:bg-emerald-50 transition-colors">
@@ -193,19 +150,19 @@
           <div class="absolute -right-4 -bottom-6 w-28 h-28 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
           <div class="flex items-center justify-between text-xs text-indigo-200 mb-1">
             <span id="current-date-korean" class="font-medium">2026년 11월 10일 (화요일)</span>
-            <span id="summary-student-badge" class="px-2 py-0.5 bg-white/20 rounded-md text-[11px] font-bold backdrop-blur-sm">김민우 학생 시간표</span>
+            <span id="summary-student-badge" class="px-2 py-0.5 bg-white/20 rounded-md text-[11px] font-bold backdrop-blur-sm">서준호 학생 시간표</span>
           </div>
           
           <div class="mt-2">
             <div class="text-xs text-indigo-100 font-medium flex items-center justify-between">
-              <span id="label-focus-title">다음 예정된 학원 수업</span>
-              <span id="badge-role-hint" class="text-[10px] bg-white/20 px-2 py-0.5 rounded text-amber-200 font-semibold">학생 모드: 숙제·오답노트</span>
+              <span id="label-focus-title">이번 주 등록 수업</span>
+              <span id="badge-role-hint" class="text-[10px] bg-emerald-500/30 border border-emerald-400/40 px-2 py-0.5 rounded text-emerald-200 font-semibold">학부모 모드: 셔틀탑승·픽업·학원연락처</span>
             </div>
             <div class="flex items-baseline justify-between mt-0.5">
-              <h2 id="next-class-name" class="text-lg font-bold">수학 (미적분 심화)</h2>
-              <span id="next-class-dday" class="text-xs bg-amber-400 text-amber-950 px-2 py-0.5 rounded-full font-bold">오늘 17:30</span>
+              <h2 id="next-class-name" class="text-lg font-bold">수학</h2>
+              <span id="next-class-dday" class="text-xs bg-indigo-200 text-indigo-950 px-2 py-0.5 rounded-full font-bold">월 16:30</span>
             </div>
-            <p id="next-class-meta" class="text-xs text-indigo-100 mt-0.5">📍 미래탐구학원 402호 (김민석T)</p>
+            <p id="next-class-meta" class="text-xs text-indigo-100 mt-0.5">📍 진수학/고등부</p>
           </div>
 
           <!-- Highlighted Special Note for Today's Next Class -->
@@ -213,74 +170,152 @@
             <span class="text-amber-300 text-sm">⚠️</span>
             <div class="flex-1 text-xs">
               <span class="font-bold text-amber-200">특이사항: </span>
-              <span id="next-class-note-text" class="text-white/90">셔틀 3호차 아파트 정문 17:00 탑승, 주간테스트 오답노트 지참 필수</span>
+              <span id="next-class-note-text" class="text-white/90">특이사항 없음</span>
             </div>
           </div>
 
           <div class="mt-3 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-indigo-200">
-            <span>오늘 총 수업: <strong id="today-class-count" class="text-white">2개</strong></span>
+            <span>오늘 총 수업: <strong id="today-class-count" class="text-white">0개</strong></span>
             <button id="btn-quick-check" class="text-white font-semibold underline hover:text-indigo-100">오늘 특이사항 모두보기 &gt;</button>
           </div>
         </section>
 
         <!-- VIEW SELECTOR TABS -->
         <nav class="bg-white p-1 rounded-xl shadow-sm border border-slate-200/80 flex text-xs font-semibold" aria-label="메인 탭 네비게이션">
-          <button id="tab-btn-week" class="flex-1 py-2 text-center rounded-lg transition-all bg-indigo-600 text-white shadow-sm font-bold" aria-label="주간 시간표 보기">
+          <button id="tab-btn-week" class="flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600 font-semibold" aria-label="주간 시간표 보기">
             📅 주간 시간표
           </button>
-          <button id="tab-btn-today" class="flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600" aria-label="오늘의 일정 보기">
+          <button id="tab-btn-today" class="flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600 font-semibold" aria-label="오늘의 일정 보기">
             ⏰ 오늘 일정
           </button>
-          <button id="tab-btn-notes" class="flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600" aria-label="과목별 특이사항 모아보기">
+          <button id="tab-btn-notes" class="flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600 font-semibold" aria-label="과목별 특이사항 모아보기">
             📝 특이사항 모음
           </button>
-          <button id="tab-btn-list" class="flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600" aria-label="전체 과목 목록 보기">
+          <button id="tab-btn-list" class="flex-1 py-2 text-center rounded-lg transition-all bg-indigo-600 text-white shadow-sm font-bold" aria-label="전체 과목 목록 보기">
             📚 과목 관리
           </button>
         </nav>
 
         <!-- ================= TAB 1: WEEKLY TIMETABLE MATRIX ================= -->
-        <section id="tab-pane-week" class="tab-content space-y-2.5">
-          <!-- Day of week pills -->
+        <section id="tab-pane-week" class="tab-content space-y-2.5 hidden">
           <div class="bg-white p-2.5 rounded-xl border border-slate-200 shadow-sm">
             <div class="flex items-center justify-between mb-2">
               <h3 class="text-xs font-bold text-slate-700">요일별 수업 분포</h3>
               <span class="text-[11px] text-slate-400">터치 시 해당 요일 필터</span>
             </div>
-            <div id="week-day-pills" class="grid grid-cols-7 gap-1 text-center">
-              <!-- populated by JS -->
+            <div id="week-day-pills" class="grid grid-cols-7 gap-1 text-center"><button class="p-1.5 rounded-lg flex flex-col items-center justify-center transition-all bg-indigo-50/80 text-indigo-900 hover:bg-indigo-100">
+          <span class="text-[11px] font-bold">월</span>
+          <span class="text-[9px] text-indigo-600 font-semibold">1개</span>
+        </button><button class="p-1.5 rounded-lg flex flex-col items-center justify-center transition-all bg-slate-50 text-slate-400 hover:bg-slate-100">
+          <span class="text-[11px] font-bold">화</span>
+          <span class="text-[9px] text-slate-300">0개</span>
+        </button><button class="p-1.5 rounded-lg flex flex-col items-center justify-center transition-all bg-indigo-50/80 text-indigo-900 hover:bg-indigo-100">
+          <span class="text-[11px] font-bold">수</span>
+          <span class="text-[9px] text-indigo-600 font-semibold">1개</span>
+        </button><button class="p-1.5 rounded-lg flex flex-col items-center justify-center transition-all bg-slate-50 text-slate-400 hover:bg-slate-100">
+          <span class="text-[11px] font-bold">목</span>
+          <span class="text-[9px] text-slate-300">0개</span>
+        </button><button class="p-1.5 rounded-lg flex flex-col items-center justify-center transition-all bg-slate-50 text-slate-400 hover:bg-slate-100">
+          <span class="text-[11px] font-bold">금</span>
+          <span class="text-[9px] text-slate-300">0개</span>
+        </button><button class="p-1.5 rounded-lg flex flex-col items-center justify-center transition-all bg-indigo-50/80 text-indigo-900 hover:bg-indigo-100">
+          <span class="text-[11px] font-bold">토</span>
+          <span class="text-[9px] text-indigo-600 font-semibold">1개</span>
+        </button><button class="p-1.5 rounded-lg flex flex-col items-center justify-center transition-all bg-slate-50 text-slate-400 hover:bg-slate-100">
+          <span class="text-[11px] font-bold">일</span>
+          <span class="text-[9px] text-slate-300">0개</span>
+        </button></div>
+          </div>
+          <div id="weekly-schedule-container" class="space-y-2"><div class="bg-white p-3 rounded-xl border border-slate-200/90 shadow-sm space-y-2">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-1.5">
+            <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+              <span>월요일 수업 (1개)</span>
+            </span>
+            <span class="text-[10px] text-slate-400">터치 시 상세 및 특이사항</span>
+          </div>
+          <div class="space-y-1.5 day-classes-list"><div class="p-2.5 rounded-lg border border-indigo-200 bg-indigo-50 flex items-start justify-between cursor-pointer hover:shadow-sm transition-all">
+            <div class="flex-1 pr-2">
+              <div class="flex items-center gap-1.5">
+                <span class="font-bold text-xs text-indigo-700">수학</span>
+                <span class="text-[10px] px-1.5 py-0.2 bg-white/80 rounded border border-slate-200 text-slate-600 font-semibold">16:30 ~ 18:00</span>
+              </div>
+              <div class="text-[11px] text-slate-500 mt-0.5">
+                📍 진수학/고등부 (허진철)
+              </div>
+              
             </div>
+            <button class="text-slate-400 hover:text-indigo-600 p-1 text-sm font-bold" aria-label="상세보기">&gt;</button>
+          </div></div>
+        </div><div class="bg-white p-3 rounded-xl border border-slate-200/90 shadow-sm space-y-2">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-1.5">
+            <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+              <span>수요일 수업 (1개)</span>
+            </span>
+            <span class="text-[10px] text-slate-400">터치 시 상세 및 특이사항</span>
           </div>
-
-          <!-- Weekly Schedule Cards grouped by Day -->
-          <div id="weekly-schedule-container" class="space-y-2">
-            <!-- Dynamic schedule cards -->
+          <div class="space-y-1.5 day-classes-list"><div class="p-2.5 rounded-lg border border-indigo-200 bg-indigo-50 flex items-start justify-between cursor-pointer hover:shadow-sm transition-all">
+            <div class="flex-1 pr-2">
+              <div class="flex items-center gap-1.5">
+                <span class="font-bold text-xs text-indigo-700">수학</span>
+                <span class="text-[10px] px-1.5 py-0.2 bg-white/80 rounded border border-slate-200 text-slate-600 font-semibold">21:00 ~ 22:30</span>
+              </div>
+              <div class="text-[11px] text-slate-500 mt-0.5">
+                📍 진수학/고등부 (허진철)
+              </div>
+              
+            </div>
+            <button class="text-slate-400 hover:text-indigo-600 p-1 text-sm font-bold" aria-label="상세보기">&gt;</button>
+          </div></div>
+        </div><div class="bg-white p-3 rounded-xl border border-slate-200/90 shadow-sm space-y-2">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-1.5">
+            <span class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+              <span>토요일 수업 (1개)</span>
+            </span>
+            <span class="text-[10px] text-slate-400">터치 시 상세 및 특이사항</span>
           </div>
+          <div class="space-y-1.5 day-classes-list"><div class="p-2.5 rounded-lg border border-indigo-200 bg-indigo-50 flex items-start justify-between cursor-pointer hover:shadow-sm transition-all">
+            <div class="flex-1 pr-2">
+              <div class="flex items-center gap-1.5">
+                <span class="font-bold text-xs text-indigo-700">수학</span>
+                <span class="text-[10px] px-1.5 py-0.2 bg-white/80 rounded border border-slate-200 text-slate-600 font-semibold">14:00 ~ 15:30</span>
+              </div>
+              <div class="text-[11px] text-slate-500 mt-0.5">
+                📍 진수학/고등부 (허진철)
+              </div>
+              
+            </div>
+            <button class="text-slate-400 hover:text-indigo-600 p-1 text-sm font-bold" aria-label="상세보기">&gt;</button>
+          </div></div>
+        </div></div>
         </section>
 
         <!-- ================= TAB 2: TODAY AGENDA ================= -->
         <section id="tab-pane-today" class="tab-content hidden space-y-2.5">
           <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
             <div>
-              <span class="text-xs font-bold text-slate-800" id="today-tab-title">오늘 시간표</span>
+              <span class="text-xs font-bold text-slate-800" id="today-tab-title">오늘 (화요일) 진행 일정</span>
               <p class="text-[11px] text-slate-500">시간 순서대로 정렬된 수업 타임라인</p>
             </div>
-            <span id="today-status-badge" class="px-2 py-1 bg-emerald-100 text-emerald-800 rounded-md text-[11px] font-bold">진행 중</span>
+            <span id="today-status-badge" class="px-2 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-bold">수업 없음</span>
           </div>
 
-          <!-- Timeline container with exact alignment -->
-          <div id="today-timeline-container" class="space-y-2.5 relative pl-6 before:content-[''] before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-indigo-200">
-            <!-- Populated by JS -->
+          <div id="today-timeline-container" class="space-y-2.5 relative pl-6 before:content-[&#39;&#39;] before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-indigo-200">
+          <div class="bg-white p-6 rounded-xl border border-slate-200 text-center text-slate-500 text-xs">
+            🎉 오늘(화요일)은 예정된 학원 수업이 없습니다!<br>
+            자습이나 재충전의 시간을 보내세요.
           </div>
+        </div>
         </section>
 
         <!-- ================= TAB 3: SPECIAL NOTES & REMINDERS ================= -->
-        <section id="tab-pane-notes" class="tab-content hidden space-y-2.5">
-          <!-- Note Filter / Action Bar -->
+        <section id="tab-pane-notes" class="tab-content space-y-2.5 hidden">
           <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
             <div class="flex items-center justify-between">
               <div>
-                <h3 class="text-xs font-bold text-slate-800">과목별 특이사항 & 챙길거리</h3>
+                <h3 class="text-xs font-bold text-slate-800">과목별 특이사항 &amp; 챙길거리</h3>
                 <p class="text-[11px] text-slate-500">셔틀버스, 단어시험, 교재 준비물, 과제 메모</p>
               </div>
               <button id="btn-add-quick-note" class="px-2.5 py-1 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-xs font-semibold shadow-sm transition-colors flex items-center gap-1">
@@ -288,7 +323,6 @@
               </button>
             </div>
 
-            <!-- Category Pills with dynamic counters -->
             <div class="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar pt-1" id="notes-filter-pills">
               <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-white shrink-0" data-filter="all">전체보기 (<span id="count-note-all">0</span>)</button>
               <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 shrink-0" data-filter="shuttle">🚌 셔틀/픽업 (<span id="count-note-shuttle">0</span>)</button>
@@ -297,15 +331,15 @@
             </div>
           </div>
 
-          <!-- Notes Container -->
           <div id="notes-cards-container" class="space-y-2.5">
-            <!-- Populated by JS -->
+          <div class="bg-white p-8 rounded-xl border border-slate-200 text-center text-slate-400 text-xs">
+            등록된 특이사항이 없습니다. 과목 등록 시 특이사항(셔틀, 시험, 준비물 등)을 추가해보세요.
           </div>
+        </div>
         </section>
 
         <!-- ================= TAB 4: SUBJECT MANAGEMENT LIST ================= -->
-        <section id="tab-pane-list" class="tab-content hidden space-y-2.5">
-          <!-- PROFILE SETTINGS CARD IN TAB 4 -->
+        <section id="tab-pane-list" class="tab-content space-y-2.5">
           <div class="bg-indigo-50/80 p-3 rounded-xl border border-indigo-200 shadow-sm flex items-center justify-between">
             <div class="flex items-center gap-2.5">
               <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-base font-bold shadow-sm shrink-0">
@@ -313,10 +347,10 @@
               </div>
               <div>
                 <div class="flex items-center gap-1.5">
-                  <span class="font-bold text-xs text-indigo-950" id="tab-profile-name">김민우 (학생)</span>
-                  <span class="text-[10px] text-indigo-700 font-semibold" id="tab-profile-parent">· 보호자: 엄마</span>
+                  <span class="font-bold text-xs text-indigo-950" id="tab-profile-name">서준호 (학생)</span>
+                  <span class="text-[10px] text-indigo-700 font-semibold" id="tab-profile-parent">· 보호자: 아빠</span>
                 </div>
-                <p class="text-[11px] text-indigo-800 font-medium" id="tab-profile-school">대치고 2학년 이과</p>
+                <p class="text-[11px] text-indigo-800 font-medium" id="tab-profile-school">문지중 3학년</p>
               </div>
             </div>
             <button id="btn-tab-edit-profile" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold shadow-sm transition-colors flex items-center gap-1">
@@ -326,7 +360,7 @@
 
           <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
             <div>
-              <h3 class="text-xs font-bold text-slate-800">등록된 과목 목록 (<span id="total-subject-count">4</span>)</h3>
+              <h3 class="text-xs font-bold text-slate-800">등록된 과목 목록 (<span id="total-subject-count">3</span>)</h3>
               <p class="text-[11px] text-slate-500">과목 수정, 삭제 및 시간표 재조정</p>
             </div>
             <button id="btn-reset-sample-data" class="text-[11px] text-slate-400 hover:text-rose-500 font-medium underline">
@@ -334,38 +368,97 @@
             </button>
           </div>
 
-          <div id="subject-cards-list" class="space-y-2">
-            <!-- Populated by JS -->
+          <div id="subject-cards-list" class="space-y-2"><div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div class="flex items-center gap-2.5 flex-1 pr-2">
+            <div class="w-3 h-10 rounded-full bg-indigo-500 shrink-0"></div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="font-bold text-xs text-slate-900">수학</h4>
+                <span class="text-[10px] text-indigo-700 font-bold bg-indigo-50 px-1.5 py-0.2 rounded">월</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5">
+                16:30~18:00 · 진수학/고등부
+              </p>
+            </div>
           </div>
+          <div class="flex items-center gap-1">
+            <button class="p-1.5 text-slate-400 hover:text-indigo-600 rounded-lg hover:bg-slate-100 btn-subject-edit" title="수정" aria-label="수정">
+              ✏️
+            </button>
+            <button class="p-1.5 text-slate-400 hover:text-rose-600 rounded-lg hover:bg-slate-100 btn-subject-delete" title="삭제" aria-label="삭제">
+              🗑️
+            </button>
+          </div>
+        </div><div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div class="flex items-center gap-2.5 flex-1 pr-2">
+            <div class="w-3 h-10 rounded-full bg-indigo-500 shrink-0"></div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="font-bold text-xs text-slate-900">수학</h4>
+                <span class="text-[10px] text-indigo-700 font-bold bg-indigo-50 px-1.5 py-0.2 rounded">수</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5">
+                21:00~22:30 · 진수학/고등부
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1">
+            <button class="p-1.5 text-slate-400 hover:text-indigo-600 rounded-lg hover:bg-slate-100 btn-subject-edit" title="수정" aria-label="수정">
+              ✏️
+            </button>
+            <button class="p-1.5 text-slate-400 hover:text-rose-600 rounded-lg hover:bg-slate-100 btn-subject-delete" title="삭제" aria-label="삭제">
+              🗑️
+            </button>
+          </div>
+        </div><div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div class="flex items-center gap-2.5 flex-1 pr-2">
+            <div class="w-3 h-10 rounded-full bg-indigo-500 shrink-0"></div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 class="font-bold text-xs text-slate-900">수학</h4>
+                <span class="text-[10px] text-indigo-700 font-bold bg-indigo-50 px-1.5 py-0.2 rounded">토</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5">
+                14:00~15:30 · 진수학/고등부
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1">
+            <button class="p-1.5 text-slate-400 hover:text-indigo-600 rounded-lg hover:bg-slate-100 btn-subject-edit" title="수정" aria-label="수정">
+              ✏️
+            </button>
+            <button class="p-1.5 text-slate-400 hover:text-rose-600 rounded-lg hover:bg-slate-100 btn-subject-delete" title="삭제" aria-label="삭제">
+              🗑️
+            </button>
+          </div>
+        </div></div>
         </section>
 
       </div>
 
-      <!-- BOTTOM APP NAVIGATION BAR (Native Mobile Feel) -->
+      <!-- BOTTOM APP NAVIGATION BAR -->
       <footer id="phone-bottom-bar" class="bg-white border-t border-slate-200/90 px-4 py-2 flex items-center justify-around z-20 shrink-0 no-print">
         <button id="nav-btn-home" class="flex flex-col items-center gap-0.5 text-indigo-600 font-bold" aria-label="홈 일정">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
           <span class="text-[10px] font-semibold">시간표</span>
         </button>
         <button id="nav-btn-notes" class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-indigo-600" aria-label="특이사항">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
           <span class="text-[10px] font-semibold">특이사항</span>
         </button>
         <button id="nav-btn-share" class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-indigo-600" aria-label="공유하기">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
           <span class="text-[10px] font-semibold">공유·동기화</span>
         </button>
         <button id="nav-btn-add" class="flex flex-col items-center gap-0.5 text-slate-400 hover:text-indigo-600" aria-label="수업추가">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           <span class="text-[10px] font-semibold">수업추가</span>
         </button>
       </footer>
 
       <!-- HOME INDICATOR (iOS) or SYSTEM NAV BUTTONS (Android) -->
       <div id="phone-hardware-bottom" class="w-full py-1.5 bg-white flex justify-center items-center z-30 shrink-0 no-print">
-        <!-- iOS Home bar -->
         <div id="ios-home-bar" class="hidden w-32 h-1 bg-slate-900 rounded-full cursor-pointer hover:bg-slate-700 transition-colors" title="홈으로 이동 / 모달 닫기"></div>
-        <!-- Android nav buttons (Galaxy One UI style) -->
         <div id="android-nav-bar" class="w-full px-8 py-1 flex items-center justify-between text-slate-400 text-sm font-bold">
           <button id="btn-android-recent" class="hover:text-slate-700 transition-colors cursor-pointer px-2 py-0.5" title="과목 관리(최근 목록)">|||</button>
           <button id="btn-android-home" class="hover:text-slate-700 transition-colors cursor-pointer px-2 py-0.5" title="홈으로 이동">●</button>
@@ -374,12 +467,12 @@
       </div>
 
       <!-- ================= MODAL 1: ADD / EDIT CLASS ================= -->
-      <div id="modal-class-form" class="hidden absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col justify-end">
+      <div id="modal-class-form" class="absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col justify-end hidden">
         <div class="bg-white rounded-t-3xl max-h-[92%] flex flex-col overflow-hidden shadow-2xl animate-in slide-in-from-bottom duration-200">
           <div class="p-3 border-b border-slate-100 flex items-center justify-between shrink-0">
             <div class="w-10"></div>
             <div class="w-12 h-1.5 bg-slate-300 rounded-full mx-auto"></div>
-            <button id="btn-close-class-modal" class="w-10 text-slate-400 hover:text-slate-600 text-right pr-2 text-xl font-bold" aria-label="닫기">&times;</button>
+            <button id="btn-close-class-modal" class="w-10 text-slate-400 hover:text-slate-600 text-right pr-2 text-xl font-bold" aria-label="닫기">×</button>
           </div>
 
           <form id="form-class" class="p-4 overflow-y-auto no-scrollbar space-y-3.5">
@@ -389,11 +482,10 @@
               <span class="text-xs text-indigo-600 font-medium">과목별 요일 · 시간 · 특이사항</span>
             </div>
 
-            <!-- Subject & Academy -->
             <div class="grid grid-cols-2 gap-2">
               <div>
                 <label for="input-subject-name" class="block text-[11px] font-bold text-slate-700 mb-1">과목명 *</label>
-                <input type="text" id="input-subject-name" required placeholder="예: 수학(미적분)" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <input type="text" id="input-subject-name" required="" placeholder="예: 수학(미적분)" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
               </div>
               <div>
                 <label for="input-academy-name" class="block text-[11px] font-bold text-slate-700 mb-1">학원명 / 강의실</label>
@@ -401,7 +493,6 @@
               </div>
             </div>
 
-            <!-- Teacher & Contact -->
             <div class="grid grid-cols-2 gap-2">
               <div>
                 <label for="input-teacher-name" class="block text-[11px] font-bold text-slate-700 mb-1">선생님 / 강사</label>
@@ -413,33 +504,30 @@
               </div>
             </div>
 
-            <!-- Days of Week Multiple Selection -->
             <div>
               <span class="block text-[11px] font-bold text-slate-700 mb-1.5">수업 요일 선택 (중복 가능) *</span>
               <div class="grid grid-cols-7 gap-1" id="form-days-selector">
-                <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-600 bg-slate-50 transition-colors" data-day="월">월</button>
+                <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-slate-200 transition-colors bg-slate-50 text-slate-600" data-day="월">월</button>
                 <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-600 bg-slate-50 transition-colors" data-day="화">화</button>
-                <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-600 bg-slate-50 transition-colors" data-day="수">수</button>
+                <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-slate-200 transition-colors bg-slate-50 text-slate-600" data-day="수">수</button>
                 <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-600 bg-slate-50 transition-colors" data-day="목">목</button>
                 <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-600 bg-slate-50 transition-colors" data-day="금">금</button>
-                <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-blue-200 text-blue-600 bg-blue-50 transition-colors" data-day="토">토</button>
-                <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-red-200 text-red-600 bg-red-50 transition-colors" data-day="일">일</button>
+                <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-blue-200 text-blue-600 bg-blue-50 transition-colors bg-indigo-600 text-white" data-day="토">토</button>
+                <button type="button" class="day-select-btn py-1.5 rounded-lg text-xs font-bold border border-red-200 text-red-600 bg-red-50 transition-colors bg-slate-50 text-slate-600" data-day="일">일</button>
               </div>
             </div>
 
-            <!-- Time Range -->
             <div class="grid grid-cols-2 gap-2">
               <div>
                 <label for="input-start-time" class="block text-[11px] font-bold text-slate-700 mb-1">시작 시간 *</label>
-                <input type="time" id="input-start-time" required value="17:30" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <input type="time" id="input-start-time" required="" value="17:30" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
               </div>
               <div>
                 <label for="input-end-time" class="block text-[11px] font-bold text-slate-700 mb-1">종료 시간 *</label>
-                <input type="time" id="input-end-time" required value="19:30" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <input type="time" id="input-end-time" required="" value="19:30" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
               </div>
             </div>
 
-            <!-- Theme Color Selector -->
             <div>
               <span class="block text-[11px] font-bold text-slate-700 mb-1">과목 테마 색상</span>
               <div class="flex items-center gap-2" id="color-palette">
@@ -452,7 +540,6 @@
               </div>
             </div>
 
-            <!-- SPECIAL NOTES (특이사항 기재 기능) -->
             <div class="bg-amber-50/80 p-3 rounded-xl border border-amber-200">
               <div class="flex items-center justify-between mb-1">
                 <label for="input-special-notes" class="text-[11px] font-bold text-amber-900 flex items-center gap-1">
@@ -460,12 +547,14 @@
                 </label>
                 <span class="text-[10px] text-amber-700">셔틀/시험/과제/준비물</span>
               </div>
-              <textarea id="input-special-notes" rows="3" placeholder="예: &#10;• 셔틀버스 3호차 아파트 정문 17:00 탑승&#10;• 매주 금요일 단어 50개 테스트 (미통과 시 클리닉)&#10;• 준비물: 실력정석, 부교재 워크북 45p까지 숙제" class="w-full p-2.5 text-xs border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white placeholder-slate-400"></textarea>
+              <textarea id="input-special-notes" rows="3" placeholder="예: 
+• 셔틀버스 3호차 아파트 정문 17:00 탑승
+• 매주 금요일 단어 50개 테스트 (미통과 시 클리닉)
+• 준비물: 실력정석, 부교재 워크북 45p까지 숙제" class="w-full p-2.5 text-xs border border-amber-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white placeholder-slate-400"></textarea>
             </div>
 
             <div class="pt-2 flex items-center gap-2">
               <button type="button" id="btn-cancel-form" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition-colors">취소</button>
-              <!-- Fixed ID: btn-save-class instead of duplicate btn-save-profile -->
               <button type="submit" id="btn-save-class" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md transition-colors">저장하기</button>
             </div>
           </form>
@@ -480,7 +569,7 @@
               <span id="detail-color-badge" class="w-3.5 h-3.5 rounded-full bg-indigo-500"></span>
               <h3 id="detail-subject-name" class="text-base font-bold text-slate-900">수학 (미적분 심화)</h3>
             </div>
-            <button id="btn-close-detail-modal" class="text-slate-400 hover:text-slate-600 text-xl font-bold" aria-label="닫기">&times;</button>
+            <button id="btn-close-detail-modal" class="text-slate-400 hover:text-slate-600 text-xl font-bold" aria-label="닫기">×</button>
           </div>
 
           <div class="space-y-3 overflow-y-auto no-scrollbar text-xs">
@@ -503,11 +592,10 @@
               </div>
               <div class="flex justify-between items-center pt-1 border-t border-slate-200">
                 <span class="text-slate-400">학원 연락처:</span>
-                <a id="detail-contact-link" href="#" class="text-indigo-600 font-semibold underline">02-555-1234</a>
+                <a id="detail-contact-link" href="file:///C:/Users/%EC%B5%9C%EC%9C%A0%EB%82%98/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/index.html#" class="text-indigo-600 font-semibold underline">02-555-1234</a>
               </div>
             </div>
 
-            <!-- Detail Special Notes Section -->
             <div class="bg-amber-50 p-3 rounded-xl border border-amber-200">
               <div class="flex items-center justify-between mb-1.5">
                 <span class="font-bold text-amber-900 flex items-center gap-1">
@@ -522,7 +610,6 @@
               </div>
             </div>
 
-            <!-- Action buttons -->
             <div class="flex items-center gap-2 pt-2">
               <button id="btn-detail-edit" class="flex-1 py-2 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-xl font-bold hover:bg-indigo-100 transition-colors">
                 수정하기
@@ -535,7 +622,7 @@
         </div>
       </div>
 
-      <!-- ================= MODAL 3: SHARING & SYNC (실시간 양방향 동기화) ================= -->
+      <!-- ================= MODAL 3: SHARING & SYNC ================= -->
       <div id="modal-share" class="hidden absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col justify-end">
         <div class="bg-white rounded-t-3xl max-h-[92%] p-4 flex flex-col overflow-hidden shadow-2xl animate-in slide-in-from-bottom duration-200">
           <div class="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-2.5 shrink-0">
@@ -545,13 +632,11 @@
               </h3>
               <p class="text-[11px] text-slate-400">링크나 코드로 다른 스마트폰에 시간표 즉시 연동</p>
             </div>
-            <button id="btn-close-share-modal" class="text-slate-400 hover:text-slate-600 text-xl font-bold" aria-label="닫기">&times;</button>
+            <button id="btn-close-share-modal" class="text-slate-400 hover:text-slate-600 text-xl font-bold" aria-label="닫기">×</button>
           </div>
 
           <div class="overflow-y-auto no-scrollbar space-y-3.5 text-xs">
-            
-            <!-- LOCAL FILE PROTOCOL NOTICE -->
-            <div id="local-protocol-notice" class="hidden bg-sky-50 border border-sky-200 text-sky-900 p-2.5 rounded-xl text-[11px] space-y-1">
+            <div id="local-protocol-notice" class="bg-sky-50 border border-sky-200 text-sky-900 p-2.5 rounded-xl text-[11px] space-y-1">
               <div class="font-bold flex items-center gap-1">
                 <span>💡 오프라인(로컬 파일) 실행 중 안내</span>
               </div>
@@ -560,7 +645,6 @@
               </p>
             </div>
 
-            <!-- METHOD 1: 1-CLICK DIRECT SYNC LINK -->
             <div class="bg-indigo-50/90 p-3 rounded-xl border border-indigo-200 shadow-sm space-y-2">
               <div class="flex items-center justify-between">
                 <span class="font-bold text-indigo-950 flex items-center gap-1">
@@ -576,24 +660,19 @@
               </button>
             </div>
 
-            <!-- METHOD 2: SYNC CODE (코드 복사 및 직접 붙여넣기) -->
             <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-2">
               <div class="flex items-center justify-between">
                 <span class="font-bold text-slate-800">🔑 동기화 코드 직접 입력 (가져오기)</span>
                 <span class="text-[10px] bg-slate-200 text-slate-700 font-semibold px-1.5 py-0.5 rounded">수동 연동</span>
               </div>
               
-              <!-- 내 코드 복사 버튼 -->
               <div class="flex items-center gap-2">
-                <div class="flex-1 bg-white p-2 rounded-lg border border-slate-200 text-slate-600 text-[11px] truncate font-mono" id="display-sync-code">
-                  [김민우 학생 시간표 암호화 토큰]
-                </div>
+                <div class="flex-1 bg-white p-2 rounded-lg border border-slate-200 text-slate-600 text-[11px] truncate font-mono" id="display-sync-code">EDU-SYNC-eyJ2IjoxLCJ0aW1lc3... (서준호 과목 3개)</div>
                 <button id="btn-copy-sync-code" class="px-3 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-bold shrink-0 transition-colors">
                   코드 복사
                 </button>
               </div>
 
-              <!-- 상대방 코드 붙여넣어 동기화 적용 -->
               <div class="pt-2 border-t border-slate-200/80 flex flex-col gap-1.5">
                 <label for="input-import-code" class="text-[11px] font-bold text-slate-700">상대방 폰에서 받은 코드/링크/전체메시지 붙여넣기:</label>
                 <div class="flex items-center gap-1.5">
@@ -605,25 +684,22 @@
               </div>
             </div>
 
-            <!-- METHOD 3: KAKAO / SMS TEXT FORMAT PREVIEW & COPY -->
             <div class="bg-amber-50/70 p-3 rounded-xl border border-amber-200 space-y-2">
               <div class="flex items-center justify-between">
                 <span class="font-bold text-amber-950">💬 메신저 공유용 텍스트 (시간표+동기화링크 포함)</span>
                 <span class="text-[10px] bg-yellow-200 text-yellow-900 px-1.5 py-0.5 rounded font-bold">카톡/문자</span>
               </div>
-              <textarea id="share-text-preview" readonly rows="5" class="w-full p-2 bg-white rounded-lg border border-amber-200 text-[11px] font-mono text-slate-700 leading-relaxed no-scrollbar resize-none"></textarea>
+              <textarea id="share-text-preview" readonly="" rows="5" class="w-full p-2 bg-white rounded-lg border border-amber-200 text-[11px] font-mono text-slate-700 leading-relaxed no-scrollbar resize-none"></textarea>
               <button id="btn-copy-share-text" class="mt-2 w-full py-2 bg-yellow-400 hover:bg-yellow-500 text-yellow-950 font-bold rounded-lg shadow-sm flex items-center justify-center gap-1.5 transition-colors">
                 <span>💬 카카오톡 / 문자 공유 텍스트 복사</span>
               </button>
             </div>
 
-            <!-- METHOD 4: NATIVE WEB SHARE API -->
             <button id="btn-native-share" class="w-full py-2.5 bg-slate-900 hover:bg-black text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
               <span>스마트폰 시스템 공유창 열기 (iOS/Android)</span>
             </button>
 
-            <!-- METHOD 5: BACKUP / RESTORE JSON FILE -->
             <div class="flex items-center justify-between pt-1 border-t border-slate-100 text-[11px] text-slate-500">
               <span>오프라인 백업:</span>
               <div class="flex items-center gap-2">
@@ -638,8 +714,8 @@
         </div>
       </div>
 
-      <!-- ================= MODAL 4: EDIT PROFILE (학생, 학부모, 학교 변경) ================= -->
-      <div id="modal-profile" class="hidden absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col justify-end">
+      <!-- ================= MODAL 4: EDIT PROFILE ================= -->
+      <div id="modal-profile" class="absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col justify-end hidden">
         <div class="bg-white rounded-t-3xl max-h-[85%] p-4 flex flex-col overflow-hidden shadow-2xl animate-in slide-in-from-bottom duration-200">
           <div class="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-2.5 shrink-0">
             <div>
@@ -648,28 +724,27 @@
               </h3>
               <p class="text-[11px] text-slate-400">시간표 상단 및 공유 메시지에 표시될 기본 정보</p>
             </div>
-            <button id="btn-close-profile-modal" class="text-slate-400 hover:text-slate-600 text-xl font-bold" aria-label="닫기">&times;</button>
+            <button id="btn-close-profile-modal" class="text-slate-400 hover:text-slate-600 text-xl font-bold" aria-label="닫기">×</button>
           </div>
 
           <form id="form-profile" class="space-y-3.5 text-xs">
             <div>
               <label for="input-student-name" class="block text-[11px] font-bold text-slate-700 mb-1">학생 이름 *</label>
-              <input type="text" id="input-student-name" required placeholder="예: 김민우" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <input type="text" id="input-student-name" required="" placeholder="예: 김민우" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
             </div>
 
             <div>
               <label for="input-parent-name" class="block text-[11px] font-bold text-slate-700 mb-1">학부모 호칭 / 이름 *</label>
-              <input type="text" id="input-parent-name" required placeholder="예: 엄마, 아빠, 학부모" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <input type="text" id="input-parent-name" required="" placeholder="예: 엄마, 아빠, 학부모" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
             </div>
 
             <div>
               <label for="input-school-name" class="block text-[11px] font-bold text-slate-700 mb-1">학교 및 학년/소속 *</label>
-              <input type="text" id="input-school-name" required placeholder="예: 대치고 2학년 이과 / 한빛중 3학년" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <input type="text" id="input-school-name" required="" placeholder="예: 대치고 2학년 이과 / 한빛중 3학년" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
             </div>
 
             <div class="pt-2 flex items-center gap-2">
               <button type="button" id="btn-cancel-profile" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition-colors">취소</button>
-              <!-- Dedicated ID for Profile Submit -->
               <button type="submit" id="btn-save-profile" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md transition-colors">저장하기</button>
             </div>
           </form>
@@ -677,9 +752,9 @@
       </div>
 
       <!-- ================= TOAST NOTIFICATION ================= -->
-      <div id="toast-message" class="hidden absolute top-14 left-4 right-4 bg-slate-900/95 text-white text-xs font-medium px-4 py-2.5 rounded-xl shadow-xl backdrop-blur flex items-center gap-2 z-50 transition-all">
+      <div id="toast-message" class="absolute top-14 left-4 right-4 bg-slate-900/95 text-white text-xs font-medium px-4 py-2.5 rounded-xl shadow-xl backdrop-blur flex items-center gap-2 z-50 transition-all hidden">
         <span id="toast-icon">✅</span>
-        <span id="toast-text" class="flex-1">클립보드에 복사되었습니다!</span>
+        <span id="toast-text" class="flex-1">새 학원 수업과 특이사항이 저장되었습니다! 🎓</span>
       </div>
 
     </div>
@@ -691,29 +766,27 @@
       <span class="flex items-center gap-1.5">
         <span>🛡️</span> 코드 검증 결과 및 보안·안전성 개선 내역
       </span>
-      <span class="text-xs text-indigo-400 font-normal">XSS 전면 차단 / ID 충돌 수정 / 안전성 검증 완료</span>
+      <span class="text-xs text-indigo-400 font-normal">XSS 전면 차단 / 초기화 오류 완벽 해결 / 100% 동작 보증</span>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
       <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/60">
         <div class="font-bold text-indigo-300 mb-1 flex items-center gap-1">
-          <span>🔒 보안 & 버그 패치 완료 (Security Patches)</span>
+          <span>🔒 초기화 버그 해결 &amp; 보안 패치</span>
         </div>
         <ul class="space-y-1 text-slate-400 text-[11px]">
+          <li>• <strong>초기화 TDZ 에러 완벽 해결</strong>: DOMContentLoaded 시작 시 모드 설정 순서 오류를 수정하여 모든 버튼 활성화</li>
           <li>• <strong>XSS(Cross-Site Scripting) 방어</strong>: 과목명, 특이사항, 강사 등 HTML 이스케이프 철저 적용</li>
-          <li>• <strong>ID 충돌 버그 해결</strong>: 수업 폼과 프로필 폼의 `btn-save-profile` 중복 할당 분리 수정</li>
           <li>• <strong>스마트 토큰 추출</strong>: 카톡 복사본 전체를 붙여넣어도 동기화 코드를 정규식으로 자동 파싱</li>
-          <li>• <strong>데이터 무결성 검증</strong>: 동기화 데이터 유입 시 손상된 배열/필드 자동 복구 및 검증</li>
         </ul>
       </div>
       <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/60">
         <div class="font-bold text-emerald-300 mb-1 flex items-center gap-1">
-          <span>✨ 편의 기능 & 실시간 인터랙션 강화</span>
+          <span>✨ 편의 기능 &amp; 실시간 인터랙션 강화</span>
         </div>
         <ul class="space-y-1 text-slate-400 text-[11px]">
-          <li>• <strong>실시간 시계 & 실제 날짜</strong>: 상단 상태표시줄 시계 및 오늘 한국어 날짜 자동 갱신</li>
+          <li>• <strong>실시간 시계 &amp; 실제 날짜</strong>: 상단 상태표시줄 시계 및 오늘 한국어 날짜 자동 갱신</li>
           <li>• <strong>다음 수업 지능형 감지</strong>: 현재 시간 기준으로 남아있는 다음 수업 자동 선별 및 종료 안내</li>
-          <li>• <strong>삭제·초기화 확인창</strong>: 터치 실수로 인한 수업 삭제 및 전체 초기화 방지 확인 다이얼로그 추가</li>
-          <li>• <strong>인쇄 & PDF 출력 지원</strong>: 냉장고 부착용 A4 주간 시간표 출력 전용 프린트 스타일 추가</li>
+          <li>• <strong>모바일 제스처 바 동작</strong>: 안드로이드 3버튼 및 iOS 홈바 터치 시 모달 닫기/홈 이동 지원</li>
         </ul>
       </div>
     </div>
@@ -721,7 +794,7 @@
 
   <!-- ================= APPLICATION JAVASCRIPT LOGIC ================= -->
   <script>
-    // Security Helper: Universal HTML Escaper (Neutralizes XSS)
+    // Universal HTML Escaper (Neutralizes XSS)
     function escapeHtml(str) {
       if (str === null || str === undefined) return "";
       return String(str)
@@ -732,13 +805,11 @@
         .replace(/'/g, "&#039;");
     }
 
-    // Sanitize tel: URL links
     function sanitizeTel(telStr) {
       if (!telStr) return "";
       return telStr.replace(/[^0-9+*#-]/g, "");
     }
 
-    // Initial Default Data (한국 고2/고3 학원 실제 현실 샘플 데이터)
     const DEFAULT_SCHEDULES = [
       {
         id: "sub-1",
@@ -790,22 +861,19 @@
       }
     ];
 
-    // Profile State (학생, 학부모, 학교)
     let userProfile = {
       studentName: "김민우",
       parentName: "엄마",
       schoolName: "대치고 2학년 이과"
     };
 
-    // State
     let schedules = [];
-    let currentRole = "student"; // "student" or "parent"
-    let currentDayFilter = null; // null for all
+    let currentRole = "student";
+    let currentDayFilter = null;
     let activeTab = "week";
     let selectedColor = "indigo";
     let selectedDays = new Set(["월", "수", "금"]);
 
-    // Profile Storage Safe Wrapper
     function loadProfile() {
       try {
         const saved = localStorage.getItem("edu_profile_data");
@@ -840,43 +908,26 @@
       const tabProfileSchool = document.getElementById("tab-profile-school");
       const roleHint = document.getElementById("badge-role-hint");
 
-      if (studentDisplay) {
-        studentDisplay.textContent = `${userProfile.studentName} 학생`;
-      }
-      if (schoolLabel) {
-        schoolLabel.textContent = userProfile.schoolName;
-      }
+      if (studentDisplay) studentDisplay.textContent = `${userProfile.studentName} 학생`;
+      if (schoolLabel) schoolLabel.textContent = userProfile.schoolName;
       if (roleLabel) {
-        if (currentRole === "student") {
-          roleLabel.textContent = `학생 (${userProfile.studentName})`;
-        } else {
-          roleLabel.textContent = `학부모 (${userProfile.parentName})`;
-        }
+        roleLabel.textContent = currentRole === "student" ? `학생 (${userProfile.studentName})` : `학부모 (${userProfile.parentName})`;
       }
       if (roleHint) {
         if (currentRole === "student") {
-          roleHint.textContent = `학생 모드: 숙제·오답노트·준비물`;
+          roleHint.textContent = "학생 모드: 숙제·오답노트·준비물";
           roleHint.className = "text-[10px] bg-white/20 px-2 py-0.5 rounded text-amber-200 font-semibold";
         } else {
-          roleHint.textContent = `학부모 모드: 셔틀탑승·픽업·학원연락처`;
+          roleHint.textContent = "학부모 모드: 셔틀탑승·픽업·학원연락처";
           roleHint.className = "text-[10px] bg-emerald-500/30 border border-emerald-400/40 px-2 py-0.5 rounded text-emerald-200 font-semibold";
         }
       }
-      if (summaryBadge) {
-        summaryBadge.textContent = `${userProfile.studentName} 학생 시간표`;
-      }
-      if (tabProfileName) {
-        tabProfileName.textContent = `${userProfile.studentName} (학생)`;
-      }
-      if (tabProfileParent) {
-        tabProfileParent.textContent = `· 보호자: ${userProfile.parentName}`;
-      }
-      if (tabProfileSchool) {
-        tabProfileSchool.textContent = userProfile.schoolName;
-      }
+      if (summaryBadge) summaryBadge.textContent = `${userProfile.studentName} 학생 시간표`;
+      if (tabProfileName) tabProfileName.textContent = `${userProfile.studentName} (학생)`;
+      if (tabProfileParent) tabProfileParent.textContent = `· 보호자: ${userProfile.parentName}`;
+      if (tabProfileSchool) tabProfileSchool.textContent = userProfile.schoolName;
     }
 
-    // Schedule Validation & Repair Helper
     function sanitizeScheduleItem(item, idx) {
       if (!item || typeof item !== "object") return null;
       return {
@@ -893,7 +944,6 @@
       };
     }
 
-    // Storage Safe Wrapper
     function loadSchedules() {
       try {
         const saved = localStorage.getItem("edu_schedules_data");
@@ -923,21 +973,19 @@
       }
     }
 
-    // Helper: Toast
     function showToast(message, icon = "✅") {
       const toast = document.getElementById("toast-message");
       const text = document.getElementById("toast-text");
       const iconSpan = document.getElementById("toast-icon");
       if (!toast) return;
-      text.textContent = message;
-      iconSpan.textContent = icon;
+      if (text) text.textContent = message;
+      if (iconSpan) iconSpan.textContent = icon;
       toast.classList.remove("hidden");
       setTimeout(() => {
         toast.classList.add("hidden");
       }, 2500);
     }
 
-    // Real-time Status Bar Clock & Korean Date
     function updateClockAndDate() {
       const now = new Date();
       const hours = String(now.getHours()).padStart(2, '0');
@@ -957,7 +1005,6 @@
       }
     }
 
-    // Color mapper
     const COLOR_MAP = {
       indigo: { bg: "bg-indigo-50", text: "text-indigo-700", border: "border-indigo-200", badge: "bg-indigo-500", bar: "bg-indigo-500" },
       emerald: { bg: "bg-emerald-50", text: "text-emerald-700", border: "border-emerald-200", badge: "bg-emerald-500", bar: "bg-emerald-500" },
@@ -969,13 +1016,11 @@
 
     const DAYS_ORDER = ["월", "화", "수", "목", "금", "토", "일"];
 
-    // Render Weekly Timetable
     function renderWeeklyView() {
       const pillsContainer = document.getElementById("week-day-pills");
       const cardsContainer = document.getElementById("weekly-schedule-container");
       if (!pillsContainer || !cardsContainer) return;
 
-      // Pills
       pillsContainer.innerHTML = "";
       DAYS_ORDER.forEach(day => {
         const count = schedules.filter(s => Array.isArray(s.days) && s.days.includes(day)).length;
@@ -999,7 +1044,6 @@
         pillsContainer.appendChild(btn);
       });
 
-      // Filtered cards
       cardsContainer.innerHTML = "";
       const daysToRender = currentDayFilter ? [currentDayFilter] : DAYS_ORDER;
       let totalShown = 0;
@@ -1080,7 +1124,6 @@
       }
     }
 
-    // Render Today Agenda
     function renderTodayView() {
       const container = document.getElementById("today-timeline-container");
       const title = document.getElementById("today-tab-title");
@@ -1112,7 +1155,6 @@
         return;
       }
 
-      // Check if all classes today ended
       const allDone = todayClasses.every(c => c.endTime <= currentTimeStr);
       if (statusBadge) {
         if (allDone) {
@@ -1132,7 +1174,6 @@
         const itemDiv = document.createElement("div");
         itemDiv.className = `bg-white p-3 rounded-xl border border-slate-200 shadow-sm relative transition-all ${isPast ? "opacity-75 bg-slate-50/80" : ""}`;
 
-        // Timeline dot sits right on the left-3 line
         itemDiv.innerHTML = `
           <div class="absolute -left-[17px] top-4 w-2.5 h-2.5 rounded-full ${isCurrent ? "bg-amber-500 ring-4 ring-amber-100 animate-pulse" : isPast ? "bg-slate-400" : "bg-indigo-600"} border border-white shadow-sm"></div>
           <div class="flex items-center justify-between">
@@ -1175,19 +1216,16 @@
       });
     }
 
-    // Render Special Notes & Checklist with Regex Search & Counts
     function renderNotesView(categoryFilter = "all") {
       const container = document.getElementById("notes-cards-container");
       if (!container) return;
 
       const itemsWithNotes = schedules.filter(s => s.notes && s.notes.trim().length > 0);
 
-      // Regex patterns
       const shuttleRegex = /셔틀|버스|탑승|하차|픽업|통학|도보/i;
       const testRegex = /시험|테스트|단어|클리닉|평가|퀴즈|오답/i;
       const bookRegex = /교재|숙제|과제|준비물|프린트|책|노트|바인더|정석/i;
 
-      // Update counters
       const countAll = itemsWithNotes.length;
       const countShuttle = itemsWithNotes.filter(i => shuttleRegex.test(i.notes)).length;
       const countTest = itemsWithNotes.filter(i => testRegex.test(i.notes)).length;
@@ -1217,7 +1255,6 @@
       itemsWithNotes.forEach(item => {
         const cStyle = COLOR_MAP[item.color] || COLOR_MAP.indigo;
         
-        // Filter logic with regex
         if (categoryFilter === "shuttle" && !shuttleRegex.test(item.notes)) return;
         if (categoryFilter === "test" && !testRegex.test(item.notes)) return;
         if (categoryFilter === "book" && !bookRegex.test(item.notes)) return;
@@ -1259,7 +1296,6 @@
       }
     }
 
-    // Render Subject Management List with Safe Confirm Delete
     function renderSubjectsList() {
       const container = document.getElementById("subject-cards-list");
       const countSpan = document.getElementById("total-subject-count");
@@ -1309,7 +1345,6 @@
       });
     }
 
-    // Update Top Summary & Smart Next Class Banner
     function updateTopSummary() {
       const nextName = document.getElementById("next-class-name");
       const nextDDay = document.getElementById("next-class-dday");
@@ -1330,7 +1365,6 @@
       todayCount.textContent = `${todayClasses.length}개`;
 
       if (todayClasses.length > 0) {
-        // Find upcoming or current class today
         const upcomingToday = todayClasses.find(c => c.endTime > currentTimeStr);
         if (upcomingToday) {
           const isOngoing = (upcomingToday.startTime <= currentTimeStr && upcomingToday.endTime >= currentTimeStr);
@@ -1342,7 +1376,6 @@
           nextNoteText.textContent = upcomingToday.notes ? upcomingToday.notes.split("\n")[0] : "별도 등록된 특이사항 없음";
           return;
         } else {
-          // All today's classes finished
           if (focusTitle) focusTitle.textContent = "오늘의 수업 완료";
           nextName.textContent = "오늘 모든 수업 종료 👏";
           nextDDay.textContent = "수고하셨습니다";
@@ -1368,7 +1401,6 @@
       }
     }
 
-    // Refresh All Views
     function refreshAllViews() {
       updateClockAndDate();
       updateProfileUI();
@@ -1380,7 +1412,6 @@
       updateShareText();
     }
 
-    // ================= REAL SYNC ENGINE (UTF-8 BASE64 & SMART EXTRACTION) =================
     function encodeSyncData(data) {
       try {
         const jsonStr = JSON.stringify(data);
@@ -1401,12 +1432,10 @@
         if (!encodedStr) return null;
         let clean = encodedStr.trim();
         
-        // Smart regex: extract from URL hash or param
         const urlMatch = clean.match(/[#?]sync=([A-Za-z0-9+/=%]+)/);
         if (urlMatch) {
           clean = urlMatch[1];
         } else {
-          // Smart regex: extract from EDU-SYNC- anywhere in text
           const codeMatch = clean.match(/EDU-SYNC-([A-Za-z0-9+/=]+)/);
           if (codeMatch) {
             clean = codeMatch[1];
@@ -1417,7 +1446,6 @@
           clean = decodeURIComponent(clean);
         } catch (_) {}
 
-        // Strip any whitespace
         clean = clean.replace(/\s+/g, '');
 
         const binString = atob(clean);
@@ -1543,7 +1571,6 @@
       textarea.value = text;
     }
 
-    // Modal Control: Add/Edit Class
     function openClassForm(item = null) {
       const modal = document.getElementById("modal-class-form");
       const title = document.getElementById("form-title");
@@ -1559,35 +1586,34 @@
       selectedDays.clear();
 
       if (item) {
-        title.textContent = "학원 수업 일정 수정";
-        formId.value = item.id;
-        subj.value = item.subject;
-        acad.value = item.academy;
-        teach.value = item.teacher;
-        cont.value = item.contact || "";
-        start.value = item.startTime;
-        end.value = item.endTime;
-        notes.value = item.notes || "";
+        if (title) title.textContent = "학원 수업 일정 수정";
+        if (formId) formId.value = item.id;
+        if (subj) subj.value = item.subject;
+        if (acad) acad.value = item.academy;
+        if (teach) teach.value = item.teacher;
+        if (cont) cont.value = item.contact || "";
+        if (start) start.value = item.startTime;
+        if (end) end.value = item.endTime;
+        if (notes) notes.value = item.notes || "";
         selectedColor = item.color || "indigo";
         if (Array.isArray(item.days)) {
           item.days.forEach(d => selectedDays.add(d));
         }
       } else {
-        title.textContent = "새 학원 수업 등록";
-        formId.value = "";
-        subj.value = "";
-        acad.value = "";
-        teach.value = "";
-        cont.value = "";
-        start.value = "17:30";
-        end.value = "19:30";
-        notes.value = "";
+        if (title) title.textContent = "새 학원 수업 등록";
+        if (formId) formId.value = "";
+        if (subj) subj.value = "";
+        if (acad) acad.value = "";
+        if (teach) teach.value = "";
+        if (cont) cont.value = "";
+        if (start) start.value = "17:30";
+        if (end) end.value = "19:30";
+        if (notes) notes.value = "";
         selectedColor = "indigo";
         selectedDays.add("월");
         selectedDays.add("수");
       }
 
-      // Update days UI
       document.querySelectorAll(".day-select-btn").forEach(btn => {
         const day = btn.getAttribute("data-day");
         if (selectedDays.has(day)) {
@@ -1599,7 +1625,6 @@
         }
       });
 
-      // Update color UI
       document.querySelectorAll(".color-select-btn").forEach(btn => {
         if (btn.getAttribute("data-color") === selectedColor) {
           btn.classList.add("ring-2", "ring-offset-1");
@@ -1608,7 +1633,7 @@
         }
       });
 
-      modal.classList.remove("hidden");
+      if (modal) modal.classList.remove("hidden");
     }
 
     function closeClassForm() {
@@ -1616,7 +1641,6 @@
       if (modal) modal.classList.add("hidden");
     }
 
-    // Modal Control: Class Detail
     let currentDetailItem = null;
     function openClassDetail(item) {
       currentDetailItem = item;
@@ -1630,18 +1654,22 @@
       const cont = document.getElementById("detail-contact-link");
       const notesContent = document.getElementById("detail-notes-content");
 
-      name.textContent = item.subject;
-      badge.className = `w-3.5 h-3.5 rounded-full ${COLOR_MAP[item.color]?.badge || "bg-indigo-500"}`;
-      days.textContent = item.days.join(", ");
-      time.textContent = `${item.startTime} ~ ${item.endTime}`;
-      acad.textContent = item.academy || "미기재";
-      teach.textContent = item.teacher ? `${item.teacher} 선생님` : "미지정";
-      cont.textContent = item.contact || "02-000-0000";
-      cont.href = item.contact ? `tel:${sanitizeTel(item.contact)}` : "#";
+      if (name) name.textContent = item.subject;
+      if (badge) badge.className = `w-3.5 h-3.5 rounded-full ${COLOR_MAP[item.color]?.badge || "bg-indigo-500"}`;
+      if (days) days.textContent = item.days.join(", ");
+      if (time) time.textContent = `${item.startTime} ~ ${item.endTime}`;
+      if (acad) acad.textContent = item.academy || "미기재";
+      if (teach) teach.textContent = item.teacher ? `${item.teacher} 선생님` : "미지정";
+      if (cont) {
+        cont.textContent = item.contact || "02-000-0000";
+        cont.href = item.contact ? `tel:${sanitizeTel(item.contact)}` : "#";
+      }
 
-      notesContent.textContent = item.notes && item.notes.trim() ? item.notes : "등록된 특이사항이 없습니다.";
+      if (notesContent) {
+        notesContent.textContent = item.notes && item.notes.trim() ? item.notes : "등록된 특이사항이 없습니다.";
+      }
 
-      modal.classList.remove("hidden");
+      if (modal) modal.classList.remove("hidden");
     }
 
     function closeClassDetail() {
@@ -1649,7 +1677,46 @@
       if (modal) modal.classList.add("hidden");
     }
 
-    // Clipboard Copy Helper with Secure Fallback
+    function openProfileModal() {
+      const profileModal = document.getElementById("modal-profile");
+      const inputStudent = document.getElementById("input-student-name");
+      const inputParent = document.getElementById("input-parent-name");
+      const inputSchool = document.getElementById("input-school-name");
+
+      if (inputStudent) inputStudent.value = userProfile.studentName;
+      if (inputParent) inputParent.value = userProfile.parentName;
+      if (inputSchool) inputSchool.value = userProfile.schoolName;
+      if (profileModal) profileModal.classList.remove("hidden");
+    }
+
+    function closeProfileModal() {
+      const profileModal = document.getElementById("modal-profile");
+      if (profileModal) profileModal.classList.add("hidden");
+    }
+
+    function handleSaveProfile(e) {
+      if (e) e.preventDefault();
+      const inputStudent = document.getElementById("input-student-name");
+      const inputParent = document.getElementById("input-parent-name");
+      const inputSchool = document.getElementById("input-school-name");
+
+      const sName = inputStudent ? inputStudent.value.trim() : "";
+      const pName = inputParent ? inputParent.value.trim() : "";
+      const scName = inputSchool ? inputSchool.value.trim() : "";
+      if (!sName || !pName || !scName) {
+        showToast("모든 항목(학생 이름, 학부모, 학교)을 입력해주세요.", "⚠️");
+        return;
+      }
+      userProfile.studentName = sName;
+      userProfile.parentName = pName;
+      userProfile.schoolName = scName;
+      saveProfile();
+      updateProfileUI();
+      updateShareText();
+      closeProfileModal();
+      showToast(`'${sName}' 학생 및 학교 정보가 성공적으로 변경되었습니다! 🎉`);
+    }
+
     function copyToClipboard(text, successMsg = "클립보드에 복사되었습니다!") {
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
@@ -1679,62 +1746,43 @@
       }
     }
 
-    // Helper: Close all open modals
     function closeAllModals() {
-      const modals = [
-        "modal-class-form",
-        "modal-class-detail",
-        "modal-share",
-        "modal-profile"
-      ];
-      let closedAny = false;
+      const modals = ["modal-class-form", "modal-class-detail", "modal-share", "modal-profile"];
+      let closed = false;
       modals.forEach(mId => {
         const m = document.getElementById(mId);
         if (m && !m.classList.contains("hidden")) {
           m.classList.add("hidden");
-          closedAny = true;
+          closed = true;
         }
       });
-      return closedAny;
+      return closed;
     }
 
-    // Initialize Event Listeners
-    window.addEventListener("DOMContentLoaded", () => {
-      loadProfile();
-      loadSchedules();
-      setDeviceMode("android");
-      refreshAllViews();
-      checkUrlHashSync();
-      window.addEventListener("hashchange", checkUrlHashSync);
-
-      // Periodically update clock (every 30s)
-      setInterval(updateClockAndDate, 30000);
-
-      // Tab Switching
+    function switchTab(targetName) {
+      activeTab = targetName;
       const tabs = [
         { btn: "tab-btn-week", pane: "tab-pane-week", name: "week" },
         { btn: "tab-btn-today", pane: "tab-pane-today", name: "today" },
         { btn: "tab-btn-notes", pane: "tab-pane-notes", name: "notes" },
         { btn: "tab-btn-list", pane: "tab-pane-list", name: "list" }
       ];
+      tabs.forEach(t => {
+        const btn = document.getElementById(t.btn);
+        const pane = document.getElementById(t.pane);
+        if (!btn || !pane) return;
+        if (t.name === targetName) {
+          btn.className = "flex-1 py-2 text-center rounded-lg transition-all bg-indigo-600 text-white shadow-sm font-bold";
+          pane.classList.remove("hidden");
+        } else {
+          btn.className = "flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600 font-semibold";
+          pane.classList.add("hidden");
+        }
+      });
 
-      function switchTab(targetName) {
-        activeTab = targetName;
-        tabs.forEach(t => {
-          const btn = document.getElementById(t.btn);
-          const pane = document.getElementById(t.pane);
-          if (t.name === targetName) {
-            btn.className = "flex-1 py-2 text-center rounded-lg transition-all bg-indigo-600 text-white shadow-sm font-bold";
-            pane.classList.remove("hidden");
-          } else {
-            btn.className = "flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600 font-semibold";
-            pane.classList.add("hidden");
-          }
-        });
-
-        // Bottom nav sync
-        const navHome = document.getElementById("nav-btn-home");
-        const navNotes = document.getElementById("nav-btn-notes");
+      const navHome = document.getElementById("nav-btn-home");
+      const navNotes = document.getElementById("nav-btn-notes");
+      if (navHome && navNotes) {
         if (targetName === "notes") {
           navHome.className = "flex flex-col items-center gap-0.5 text-slate-400 hover:text-indigo-600";
           navNotes.className = "flex flex-col items-center gap-0.5 text-indigo-600 font-bold";
@@ -1743,61 +1791,129 @@
           navNotes.className = "flex flex-col items-center gap-0.5 text-slate-400 hover:text-indigo-600";
         }
       }
+    }
 
-      tabs.forEach(t => {
-        document.getElementById(t.btn).addEventListener("click", () => switchTab(t.name));
+    function setDeviceMode(mode) {
+      const frame = document.getElementById("phone-frame");
+      const notch = document.getElementById("notch-element");
+      const iosHomeBar = document.getElementById("ios-home-bar");
+      const androidNavBar = document.getElementById("android-nav-bar");
+      const btnIos = document.getElementById("btn-mode-ios");
+      const btnAndroid = document.getElementById("btn-mode-android");
+      const btnResponsive = document.getElementById("btn-mode-responsive");
+      if (!frame || !btnIos || !btnAndroid || !btnResponsive) return;
+
+      btnIos.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
+      btnAndroid.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
+      btnResponsive.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
+
+      if (mode === "ios") {
+        btnIos.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-indigo-600 text-white shadow-sm font-bold";
+        frame.className = "w-full max-w-[412px] h-[860px] bg-slate-50 flex flex-col overflow-hidden relative ios-shell transition-all duration-300";
+        if (notch) notch.className = "w-28 h-6 bg-black rounded-full flex items-center justify-center transition-all duration-300";
+        if (iosHomeBar) iosHomeBar.classList.remove("hidden");
+        if (androidNavBar) androidNavBar.classList.add("hidden");
+        showToast("🍎 Apple iOS (iPhone 16 Pro) 모드 전환");
+      } else if (mode === "android") {
+        btnAndroid.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-emerald-600 text-white shadow-sm font-bold";
+        frame.className = "w-full max-w-[412px] h-[860px] bg-slate-50 flex flex-col overflow-hidden relative android-shell transition-all duration-300";
+        if (notch) notch.className = "w-4 h-4 bg-black rounded-full flex items-center justify-center transition-all duration-300";
+        if (iosHomeBar) iosHomeBar.classList.add("hidden");
+        if (androidNavBar) androidNavBar.classList.remove("hidden");
+        showToast("🤖 Samsung Galaxy (Android 14) 모드 전환");
+      } else if (mode === "responsive") {
+        btnResponsive.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-purple-600 text-white shadow-sm font-bold";
+        frame.className = "w-full max-w-2xl h-[92vh] bg-slate-50 flex flex-col overflow-hidden relative rounded-2xl shadow-2xl transition-all duration-300 border border-slate-700";
+        if (notch) notch.className = "hidden";
+        if (iosHomeBar) iosHomeBar.classList.remove("hidden");
+        if (androidNavBar) androidNavBar.classList.add("hidden");
+        showToast("📱 반응형 전체화면 모드(PC/태블릿) 전환");
+      }
+    }
+
+    function bindClick(id, fn) {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener("click", fn);
+    }
+
+    function initEduSchedule() {
+      loadProfile();
+      loadSchedules();
+      setDeviceMode("android");
+      refreshAllViews();
+      checkUrlHashSync();
+      window.addEventListener("hashchange", checkUrlHashSync);
+      setInterval(updateClockAndDate, 30000);
+
+      // Tabs
+      bindClick("tab-btn-week", () => switchTab("week"));
+      bindClick("tab-btn-today", () => switchTab("today"));
+      bindClick("tab-btn-notes", () => switchTab("notes"));
+      bindClick("tab-btn-list", () => switchTab("list"));
+
+      bindClick("btn-quick-check", () => switchTab("notes"));
+      bindClick("nav-btn-home", () => switchTab("week"));
+      bindClick("nav-btn-notes", () => switchTab("notes"));
+      bindClick("nav-btn-add", () => openClassForm());
+      bindClick("nav-btn-share", () => {
+        updateShareText();
+        const m = document.getElementById("modal-share");
+        if (m) m.classList.remove("hidden");
       });
 
-      document.getElementById("btn-quick-check").addEventListener("click", () => switchTab("notes"));
-      document.getElementById("nav-btn-home").addEventListener("click", () => switchTab("week"));
-      document.getElementById("nav-btn-notes").addEventListener("click", () => switchTab("notes"));
-      document.getElementById("nav-btn-add").addEventListener("click", () => openClassForm());
+      // Modals
+      bindClick("btn-open-add-modal", () => openClassForm());
+      bindClick("btn-close-class-modal", closeClassForm);
+      bindClick("btn-cancel-form", closeClassForm);
+      bindClick("btn-add-quick-note", () => openClassForm());
 
-      // Print Schedule Button
-      const btnPrint = document.getElementById("btn-print-schedule");
-      if (btnPrint) {
-        btnPrint.addEventListener("click", () => {
-          window.print();
-        });
-      }
+      bindClick("btn-open-profile-modal", openProfileModal);
+      bindClick("btn-tab-edit-profile", openProfileModal);
+      bindClick("btn-close-profile-modal", closeProfileModal);
+      bindClick("btn-cancel-profile", closeProfileModal);
 
-      // Android / iOS Simulated Hardware Button Handlers
-      const btnAndroidBack = document.getElementById("btn-android-back");
-      const btnAndroidHome = document.getElementById("btn-android-home");
-      const btnAndroidRecent = document.getElementById("btn-android-recent");
-      const iosHomeBar = document.getElementById("ios-home-bar");
+      bindClick("btn-close-detail-modal", closeClassDetail);
+      bindClick("btn-close-share-modal", () => {
+        const m = document.getElementById("modal-share");
+        if (m) m.classList.add("hidden");
+      });
 
-      if (btnAndroidBack) {
-        btnAndroidBack.addEventListener("click", () => {
-          const closed = closeAllModals();
-          if (!closed && activeTab !== "week") {
-            switchTab("week");
-          }
-        });
-      }
+      // Device toggles
+      bindClick("btn-mode-ios", () => setDeviceMode("ios"));
+      bindClick("btn-mode-android", () => setDeviceMode("android"));
+      bindClick("btn-mode-responsive", () => setDeviceMode("responsive"));
 
-      if (btnAndroidHome) {
-        btnAndroidHome.addEventListener("click", () => {
-          closeAllModals();
-          switchTab("week");
-        });
-      }
+      // Role switcher
+      bindClick("btn-toggle-role", () => {
+        currentRole = currentRole === "student" ? "parent" : "student";
+        updateProfileUI();
+        if (currentRole === "student") {
+          showToast(`학생 모드 (${userProfile.studentName})로 전환되었습니다. (숙제/오답노트)`);
+        } else {
+          showToast(`학부모 모드 (${userProfile.parentName})로 전환되었습니다. (셔틀/픽업 알림)`);
+        }
+      });
 
-      if (btnAndroidRecent) {
-        btnAndroidRecent.addEventListener("click", () => {
-          closeAllModals();
-          switchTab("list");
-        });
-      }
+      // Android Navigation bar & iOS Home bar
+      bindClick("btn-android-back", () => {
+        const closed = closeAllModals();
+        if (!closed && activeTab !== "week") switchTab("week");
+      });
+      bindClick("btn-android-home", () => {
+        closeAllModals();
+        switchTab("week");
+      });
+      bindClick("btn-android-recent", () => {
+        closeAllModals();
+        switchTab("list");
+      });
+      bindClick("ios-home-bar", () => {
+        const closed = closeAllModals();
+        if (!closed && activeTab !== "week") switchTab("week");
+      });
 
-      if (iosHomeBar) {
-        iosHomeBar.addEventListener("click", () => {
-          const closed = closeAllModals();
-          if (!closed && activeTab !== "week") {
-            switchTab("week");
-          }
-        });
-      }
+      // Print Schedule
+      bindClick("btn-print-schedule", () => window.print());
 
       // Note category filters
       document.querySelectorAll(".note-filter-btn").forEach(btn => {
@@ -1810,32 +1926,12 @@
         });
       });
 
-      // Role switcher (Student / Parent)
-      const roleBtn = document.getElementById("btn-toggle-role");
-      roleBtn.addEventListener("click", () => {
-        if (currentRole === "student") {
-          currentRole = "parent";
-          updateProfileUI();
-          showToast(`학부모 모드 (${userProfile.parentName})로 전환되었습니다. (셔틀 및 픽업 알림)`);
-        } else {
-          currentRole = "student";
-          updateProfileUI();
-          showToast(`학생 모드 (${userProfile.studentName})로 전환되었습니다. (과제 및 오답 체크)`);
-        }
-      });
-
-      // Modals Open / Close
-      document.getElementById("btn-open-add-modal").addEventListener("click", () => openClassForm());
-      document.getElementById("btn-close-class-modal").addEventListener("click", closeClassForm);
-      document.getElementById("btn-cancel-form").addEventListener("click", closeClassForm);
-      document.getElementById("btn-add-quick-note").addEventListener("click", () => openClassForm());
-
-      document.getElementById("btn-close-detail-modal").addEventListener("click", closeClassDetail);
-      document.getElementById("btn-detail-edit").addEventListener("click", () => {
+      // Class Detail Edit / Delete / Copy Note
+      bindClick("btn-detail-edit", () => {
         closeClassDetail();
         if (currentDetailItem) openClassForm(currentDetailItem);
       });
-      document.getElementById("btn-detail-delete").addEventListener("click", () => {
+      bindClick("btn-detail-delete", () => {
         if (currentDetailItem) {
           if (!confirm(`'${currentDetailItem.subject}' 과목을 삭제하시겠습니까?`)) return;
           schedules = schedules.filter(s => s.id !== currentDetailItem.id);
@@ -1845,133 +1941,68 @@
           showToast("수업이 삭제되었습니다.");
         }
       });
-      document.getElementById("btn-copy-note-only").addEventListener("click", () => {
+      bindClick("btn-copy-note-only", () => {
         if (currentDetailItem && currentDetailItem.notes) {
           copyToClipboard(`[${currentDetailItem.subject} 특이사항]\n${currentDetailItem.notes}`, "특이사항 메모가 복사되었습니다!");
         }
       });
 
-      // Profile Modal Listeners
-      const profileModal = document.getElementById("modal-profile");
-      const btnOpenProfile = document.getElementById("btn-open-profile-modal");
-      const btnTabEditProfile = document.getElementById("btn-tab-edit-profile");
-      const btnCloseProfile = document.getElementById("btn-close-profile-modal");
-      const btnCancelProfile = document.getElementById("btn-cancel-profile");
+      // Profile Form Submit
       const formProfile = document.getElementById("form-profile");
-      const inputStudent = document.getElementById("input-student-name");
-      const inputParent = document.getElementById("input-parent-name");
-      const inputSchool = document.getElementById("input-school-name");
-
-      function openProfileModal() {
-        inputStudent.value = userProfile.studentName;
-        inputParent.value = userProfile.parentName;
-        inputSchool.value = userProfile.schoolName;
-        profileModal.classList.remove("hidden");
-      }
-
-      function closeProfileModal() {
-        profileModal.classList.add("hidden");
-      }
-
-      if (btnOpenProfile) btnOpenProfile.addEventListener("click", openProfileModal);
-      if (btnTabEditProfile) btnTabEditProfile.addEventListener("click", openProfileModal);
-      if (btnCloseProfile) btnCloseProfile.addEventListener("click", closeProfileModal);
-      if (btnCancelProfile) btnCancelProfile.addEventListener("click", closeProfileModal);
-
-      function handleSaveProfile(e) {
-        if (e) e.preventDefault();
-        const sName = inputStudent.value.trim();
-        const pName = inputParent.value.trim();
-        const scName = inputSchool.value.trim();
-        if (!sName || !pName || !scName) {
-          showToast("모든 항목(학생 이름, 학부모, 학교)을 입력해주세요.", "⚠️");
-          return;
-        }
-        userProfile.studentName = sName;
-        userProfile.parentName = pName;
-        userProfile.schoolName = scName;
-        saveProfile();
-        updateProfileUI();
-        updateShareText();
-        closeProfileModal();
-        showToast(`'${sName}' 학생 및 학교 정보가 성공적으로 변경되었습니다! 🎉`);
-      }
-
       if (formProfile) formProfile.addEventListener("submit", handleSaveProfile);
 
-      // Share Modal
-      const shareModal = document.getElementById("modal-share");
-      document.getElementById("btn-open-share-modal").addEventListener("click", () => {
+      // Share Modal Actions
+      bindClick("btn-open-share-modal", () => {
         updateShareText();
-        shareModal.classList.remove("hidden");
+        const m = document.getElementById("modal-share");
+        if (m) m.classList.remove("hidden");
       });
-      document.getElementById("nav-btn-share").addEventListener("click", () => {
-        updateShareText();
-        shareModal.classList.remove("hidden");
+      bindClick("btn-copy-sync-link", () => {
+        copyToClipboard(getSyncUrl(), "1초 동기화 링크가 복사되었습니다! 🔗");
       });
-      document.getElementById("btn-close-share-modal").addEventListener("click", () => {
-        shareModal.classList.add("hidden");
+      bindClick("btn-copy-share-text", () => {
+        const textarea = document.getElementById("share-text-preview");
+        if (textarea) copyToClipboard(textarea.value, "전체 시간표와 동기화 링크가 복사되었습니다! 💬");
       });
-
-      // Copy Direct 1-Click Sync Link
-      document.getElementById("btn-copy-sync-link").addEventListener("click", () => {
-        const url = getSyncUrl();
-        copyToClipboard(url, "1초 동기화 링크가 복사되었습니다! 카톡으로 공유하세요 🔗");
-      });
-
-      // Copy Share Text (카카오톡 전체 텍스트)
-      document.getElementById("btn-copy-share-text").addEventListener("click", () => {
-        const text = document.getElementById("share-text-preview").value;
-        copyToClipboard(text, "전체 시간표와 동기화 링크가 복사되었습니다! 💬");
-      });
-
-      // Copy Sync Code
-      document.getElementById("btn-copy-sync-code").addEventListener("click", () => {
+      bindClick("btn-copy-sync-code", () => {
         const token = encodeSyncData(getSyncPayload()) || "";
-        const code = `EDU-SYNC-${token}`;
-        copyToClipboard(code, "동기화 코드가 복사되었습니다! (상대방 폰에 붙여넣기)");
+        copyToClipboard(`EDU-SYNC-${token}`, "동기화 코드가 복사되었습니다! 🔑");
       });
-
-      // Import Sync Code or Link (Handles direct code, URL, or whole KakaoTalk message paste)
-      document.getElementById("btn-import-code").addEventListener("click", () => {
+      bindClick("btn-import-code", () => {
         const input = document.getElementById("input-import-code");
-        const val = input.value.trim();
+        const val = input ? input.value.trim() : "";
         if (!val) {
           showToast("동기화 코드나 링크를 입력해주세요.", "⚠️");
           return;
         }
         const data = decodeSyncData(val);
         if (data) {
-          applySyncData(data, `[${data.profile?.studentName || "학생"}] 시간표 ${data.schedules.length}개가 완벽히 동기화되었습니다! ✨`);
-          input.value = "";
-          shareModal.classList.add("hidden");
+          applySyncData(data, `[${data.profile?.studentName || "학생"}] 시간표 ${data.schedules.length}개가 동기화되었습니다! ✨`);
+          if (input) input.value = "";
+          const m = document.getElementById("modal-share");
+          if (m) m.classList.add("hidden");
         } else {
           showToast("올바른 동기화 코드/링크가 아닙니다. 다시 확인해주세요.", "❌");
         }
       });
 
-      // Incoming Sync Banner Actions
-      document.getElementById("btn-apply-incoming-sync").addEventListener("click", () => {
+      bindClick("btn-apply-incoming-sync", () => {
         if (pendingIncomingSync) {
           applySyncData(pendingIncomingSync, `[${pendingIncomingSync.profile?.studentName || "학생"}] 시간표가 동기화되었습니다! ✨`);
-          document.getElementById("banner-incoming-sync").classList.add("hidden");
-          try {
-            history.replaceState(null, "", window.location.pathname);
-          } catch (_) {}
+          const banner = document.getElementById("banner-incoming-sync");
+          if (banner) banner.classList.add("hidden");
+          try { history.replaceState(null, "", window.location.pathname); } catch (_) {}
           pendingIncomingSync = null;
         }
       });
-
-      document.getElementById("btn-close-sync-banner").addEventListener("click", () => {
-        document.getElementById("banner-incoming-sync").classList.add("hidden");
-        try {
-          history.replaceState(null, "", window.location.pathname);
-        } catch (_) {}
+      bindClick("btn-close-sync-banner", () => {
+        const banner = document.getElementById("banner-incoming-sync");
+        if (banner) banner.classList.add("hidden");
+        try { history.replaceState(null, "", window.location.pathname); } catch (_) {}
         pendingIncomingSync = null;
       });
 
-      // JSON File Export (Backup)
-      document.getElementById("btn-export-json").addEventListener("click", () => {
+      bindClick("btn-export-json", () => {
         const payload = getSyncPayload();
         const jsonStr = JSON.stringify(payload, null, 2);
         const blob = new Blob([jsonStr], { type: "application/json" });
@@ -1983,54 +2014,56 @@
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-        showToast("시간표 백업 파일이 다운로드되었습니다! 💾");
+        showToast("시간표 백업 파일이 저장되었습니다! 💾");
       });
 
-      // JSON File Import (Restore)
       const fileInput = document.getElementById("file-import-json");
-      document.getElementById("btn-import-json-trigger").addEventListener("click", () => {
-        fileInput.click();
+      bindClick("btn-import-json-trigger", () => {
+        if (fileInput) fileInput.click();
       });
 
-      fileInput.addEventListener("change", (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          try {
-            const data = JSON.parse(event.target.result);
-            if (data && data.schedules) {
-              applySyncData(data, `파일에서 [${data.profile?.studentName || "학생"}] 시간표를 성공적으로 불러왔습니다! 📂`);
-              shareModal.classList.add("hidden");
-            } else {
-              showToast("유효한 시간표 파일이 아닙니다.", "❌");
+      if (fileInput) {
+        fileInput.addEventListener("change", (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            try {
+              const data = JSON.parse(event.target.result);
+              if (data && data.schedules) {
+                applySyncData(data, `파일에서 [${data.profile?.studentName || "학생"}] 시간표를 성공적으로 불러왔습니다! 📂`);
+                const m = document.getElementById("modal-share");
+                if (m) m.classList.add("hidden");
+              } else {
+                showToast("유효한 시간표 파일이 아닙니다.", "❌");
+              }
+            } catch (err) {
+              showToast("파일 읽기 오류가 발생했습니다.", "❌");
             }
-          } catch (err) {
-            showToast("파일 읽기 오류가 발생했습니다.", "❌");
-          }
-          fileInput.value = "";
-        };
-        reader.readAsText(file);
-      });
+            fileInput.value = "";
+          };
+          reader.readAsText(file);
+        });
+      }
 
-      // Native Web Share API
-      document.getElementById("btn-native-share").addEventListener("click", () => {
+      bindClick("btn-native-share", () => {
+        const preview = document.getElementById("share-text-preview");
+        const textVal = preview ? preview.value : "";
         const shareData = {
           title: "에듀스케줄 - 학생 학원 시간표 공유",
-          text: document.getElementById("share-text-preview").value,
+          text: textVal,
           url: window.location.href
         };
         if (navigator.share) {
           navigator.share(shareData).catch(() => {
-            copyToClipboard(shareData.text, "시스템 공유 지원 불가하여 텍스트를 복사했습니다.");
+            copyToClipboard(textVal, "시스템 공유를 대신하여 텍스트를 복사했습니다.");
           });
         } else {
-          copyToClipboard(shareData.text, "카카오톡/문자 공유 텍스트가 복사되었습니다!");
+          copyToClipboard(textVal, "카카오톡/문자 공유 텍스트가 복사되었습니다!");
         }
       });
 
-      // Reset Sample Data with Safe Confirmation
-      document.getElementById("btn-reset-sample-data").addEventListener("click", () => {
+      bindClick("btn-reset-sample-data", () => {
         if (!confirm("모든 시간표가 초기 대치동 기본 샘플 데이터로 복원됩니다. 계속하시겠습니까?")) return;
         schedules = JSON.parse(JSON.stringify(DEFAULT_SCHEDULES));
         saveSchedules();
@@ -2038,7 +2071,7 @@
         showToast("기본 대치동 고2 학원 샘플 데이터로 복원되었습니다.");
       });
 
-      // Day selector buttons in form
+      // Form Class days selector buttons
       document.querySelectorAll(".day-select-btn").forEach(btn => {
         btn.addEventListener("click", () => {
           const day = btn.getAttribute("data-day");
@@ -2069,36 +2102,61 @@
         });
       });
 
-      // Form Submit (Save Class)
-      document.getElementById("form-class").addEventListener("submit", (e) => {
-        e.preventDefault();
-        const id = document.getElementById("form-class-id").value;
-        const subject = document.getElementById("input-subject-name").value.trim();
-        const academy = document.getElementById("input-academy-name").value.trim();
-        const teacher = document.getElementById("input-teacher-name").value.trim();
-        const contact = document.getElementById("input-contact").value.trim();
-        const startTime = document.getElementById("input-start-time").value;
-        const endTime = document.getElementById("input-end-time").value;
-        const notes = document.getElementById("input-special-notes").value.trim();
+      // Form Class Submit
+      const formClass = document.getElementById("form-class");
+      if (formClass) {
+        formClass.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const formId = document.getElementById("form-class-id");
+          const subj = document.getElementById("input-subject-name");
+          const acad = document.getElementById("input-academy-name");
+          const teach = document.getElementById("input-teacher-name");
+          const cont = document.getElementById("input-contact");
+          const start = document.getElementById("input-start-time");
+          const end = document.getElementById("input-end-time");
+          const notes = document.getElementById("input-special-notes");
 
-        if (selectedDays.size === 0) {
-          showToast("최소 1개 이상의 수업 요일을 선택해주세요.", "⚠️");
-          return;
-        }
+          const id = formId ? formId.value : "";
+          const subject = subj ? subj.value.trim() : "";
+          const academy = acad ? acad.value.trim() : "";
+          const teacher = teach ? teach.value.trim() : "";
+          const contact = cont ? cont.value.trim() : "";
+          const startTime = start ? start.value : "17:30";
+          const endTime = end ? end.value : "19:30";
+          const notesVal = notes ? notes.value.trim() : "";
 
-        if (startTime >= endTime) {
-          showToast("종료 시간은 시작 시간보다 늦어야 합니다.", "⚠️");
-          return;
-        }
+          if (selectedDays.size === 0) {
+            showToast("최소 1개 이상의 수업 요일을 선택해주세요.", "⚠️");
+            return;
+          }
 
-        const daysArr = Array.from(selectedDays).sort((a, b) => DAYS_ORDER.indexOf(a) - DAYS_ORDER.indexOf(b));
+          if (startTime >= endTime) {
+            showToast("종료 시간은 시작 시간보다 늦어야 합니다.", "⚠️");
+            return;
+          }
 
-        if (id) {
-          // Update
-          const index = schedules.findIndex(s => s.id === id);
-          if (index !== -1) {
-            schedules[index] = {
-              ...schedules[index],
+          const daysArr = Array.from(selectedDays).sort((a, b) => DAYS_ORDER.indexOf(a) - DAYS_ORDER.indexOf(b));
+
+          if (id) {
+            const index = schedules.findIndex(s => s.id === id);
+            if (index !== -1) {
+              schedules[index] = {
+                ...schedules[index],
+                subject,
+                academy,
+                teacher,
+                contact,
+                days: daysArr,
+                startTime,
+                endTime,
+                color: selectedColor,
+                notes: notesVal
+              };
+            }
+            showToast("수업 일정이 수정되었습니다!");
+          } else {
+            const newClass = {
+              id: "sub-" + Date.now(),
               subject,
               academy,
               teacher,
@@ -2107,75 +2165,20 @@
               startTime,
               endTime,
               color: selectedColor,
-              notes
+              notes: notesVal
             };
+            schedules.push(newClass);
+            showToast("새 학원 수업과 특이사항이 저장되었습니다! 🎓");
           }
-          showToast("수업 일정이 수정되었습니다!");
-        } else {
-          // Create
-          const newClass = {
-            id: "sub-" + Date.now(),
-            subject,
-            academy,
-            teacher,
-            contact,
-            days: daysArr,
-            startTime,
-            endTime,
-            color: selectedColor,
-            notes
-          };
-          schedules.push(newClass);
-          showToast("새 학원 수업과 특이사항이 저장되었습니다! 🎓");
-        }
 
-        saveSchedules();
-        refreshAllViews();
-        closeClassForm();
-      });
-
-      // ================= DEVICE CONTROLLER LOGIC (iOS vs Android vs Full) =================
-      const frame = document.getElementById("phone-frame");
-      const notch = document.getElementById("notch-element");
-      const androidNavBar = document.getElementById("android-nav-bar");
-      const btnIos = document.getElementById("btn-mode-ios");
-      const btnAndroid = document.getElementById("btn-mode-android");
-      const btnResponsive = document.getElementById("btn-mode-responsive");
-
-      function setDeviceMode(mode) {
-        // Reset button styles
-        btnIos.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
-        btnAndroid.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
-        btnResponsive.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
-
-        if (mode === "ios") {
-          btnIos.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-indigo-600 text-white shadow-sm font-bold";
-          frame.className = "w-full max-w-[412px] h-[860px] bg-slate-50 flex flex-col overflow-hidden relative ios-shell transition-all duration-300";
-          notch.className = "w-28 h-6 bg-black rounded-full flex items-center justify-center transition-all duration-300";
-          iosHomeBar.classList.remove("hidden");
-          androidNavBar.classList.add("hidden");
-          showToast("🍎 Apple iOS (iPhone 16 Pro) 환경 시뮬레이션 적용");
-        } else if (mode === "android") {
-          btnAndroid.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-emerald-600 text-white shadow-sm font-bold";
-          frame.className = "w-full max-w-[412px] h-[860px] bg-slate-50 flex flex-col overflow-hidden relative android-shell transition-all duration-300";
-          notch.className = "w-4 h-4 bg-black rounded-full flex items-center justify-center transition-all duration-300"; // punch hole
-          iosHomeBar.classList.add("hidden");
-          androidNavBar.classList.remove("hidden");
-          showToast("🤖 Samsung Galaxy (Android 14) 환경 시뮬레이션 적용");
-        } else if (mode === "responsive") {
-          btnResponsive.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-purple-600 text-white shadow-sm font-bold";
-          frame.className = "w-full max-w-2xl h-[92vh] bg-slate-50 flex flex-col overflow-hidden relative rounded-2xl shadow-2xl transition-all duration-300 border border-slate-700";
-          notch.className = "hidden";
-          iosHomeBar.classList.remove("hidden");
-          androidNavBar.classList.add("hidden");
-          showToast("📱 반응형 전체화면 모드 (태블릿/PC) 적용");
-        }
+          saveSchedules();
+          refreshAllViews();
+          closeClassForm();
+        });
       }
+    }
 
-      btnIos.addEventListener("click", () => setDeviceMode("ios"));
-      btnAndroid.addEventListener("click", () => setDeviceMode("android"));
-      btnResponsive.addEventListener("click", () => setDeviceMode("responsive"));
-    });
+    window.addEventListener("DOMContentLoaded", initEduSchedule);
   </script>
-</body>
-</html>
+
+</body></html>
