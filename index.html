@@ -56,13 +56,13 @@
     <!-- Device Mode Toggles & Environment Info -->
     <div class="flex flex-wrap items-center justify-center gap-2">
       <div class="bg-slate-900/80 p-1 rounded-xl flex items-center border border-slate-700">
-        <button id="btn-mode-ios" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-indigo-600 text-white shadow-sm" aria-label="iPhone iOS 모드로 보기">
-          <span>🍏</span>
-          <span>iOS (iPhone 16)</span>
-        </button>
-        <button id="btn-mode-android" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white" aria-label="갤럭시 Android 모드로 보기">
+        <button id="btn-mode-android" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-emerald-600 text-white shadow-sm font-bold" aria-label="갤럭시 Android 모드로 보기">
           <span>🤖</span>
           <span>Android (Galaxy S24)</span>
+        </button>
+        <button id="btn-mode-ios" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white" aria-label="iPhone iOS 모드로 보기">
+          <span>🍏</span>
+          <span>iOS (iPhone 16)</span>
         </button>
         <button id="btn-mode-responsive" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white" aria-label="전체화면 반응형으로 보기">
           <span>📱</span>
@@ -80,7 +80,7 @@
 
   <!-- ================= DEVICE PREVIEW CONTAINER ================= -->
   <main id="device-wrapper" class="w-full flex justify-center items-center transition-all duration-300">
-    <div id="phone-frame" class="w-full max-w-[412px] h-[860px] bg-slate-50 flex flex-col overflow-hidden relative ios-shell transition-all duration-300">
+    <div id="phone-frame" class="w-full max-w-[412px] h-[860px] bg-slate-50 flex flex-col overflow-hidden relative android-shell transition-all duration-300">
       
       <!-- PHONE HARDWARE NOTCH / DYNAMIC ISLAND (iOS) / PUNCH HOLE (Android) -->
       <div id="phone-top-hardware" class="w-full pt-3 px-6 pb-1 bg-white flex items-center justify-between z-30 shrink-0">
@@ -88,8 +88,7 @@
         <span id="status-bar-time" class="text-xs font-semibold text-slate-900 tracking-tight">18:55</span>
         
         <!-- Dynamic Island or Camera Hole -->
-        <div id="notch-element" class="w-28 h-6 bg-black rounded-full flex items-center justify-center transition-all duration-300">
-          <div class="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-800 ml-auto mr-2"></div>
+        <div id="notch-element" class="w-4 h-4 bg-black rounded-full flex items-center justify-center transition-all duration-300">
         </div>
 
         <!-- Status Icons -->
@@ -101,28 +100,27 @@
       </div>
 
       <!-- APP HEADER / NAV -->
-      <nav class="bg-white/95 backdrop-blur border-b border-slate-100 px-4 py-2.5 flex items-center justify-between z-20 shrink-0">
+      <nav class="bg-white/95 backdrop-blur border-b border-slate-100 px-3.5 py-2 flex items-center justify-between z-20 shrink-0">
         <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-base shadow-sm font-bold">
-            E
+          <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-base shadow-sm font-bold shrink-0">
+            🎓
           </div>
           <div>
             <div class="flex items-center gap-1.5">
-              <span class="font-bold text-slate-900 text-sm">에듀스케줄</span>
-              <!-- Role Switcher (Student / Parent) -->
-              <button id="btn-toggle-role" class="px-2 py-0.5 bg-indigo-50 border border-indigo-200 text-indigo-700 rounded-full text-[11px] font-semibold hover:bg-indigo-100 transition-colors" title="클릭하여 학생/학부모 전환">
-                👤 <span id="label-role">학생 모드 (민우)</span> ⇄
-              </button>
+              <span id="label-student-display" class="font-bold text-slate-900 text-xs">김민우 학생</span>
+              <button id="btn-open-profile-modal" class="px-1.5 py-0.5 bg-indigo-50 border border-indigo-200 text-indigo-700 rounded text-[10px] font-bold hover:bg-indigo-100 transition-colors" title="학생, 학부모, 학교 변경">정보변경</button>
             </div>
-            <div class="flex items-center gap-1.5 mt-0.5">
+            <div class="flex items-center gap-1 mt-0.5">
               <span id="label-school-grade" class="text-[10px] text-slate-500 font-medium">대치고 2학년 이과</span>
-              <button id="btn-open-profile-modal" class="text-[10px] text-indigo-600 hover:text-indigo-800 font-semibold underline px-1 py-0.2 rounded hover:bg-indigo-50 transition-colors" title="학생, 학부모, 학교 변경">정보변경</button>
             </div>
           </div>
         </div>
 
-        <!-- Quick Share & Sync Button -->
+        <!-- Right Quick Actions -->
         <div class="flex items-center gap-1">
+          <button id="btn-toggle-role" class="px-2 py-1 bg-slate-50 hover:bg-indigo-50 border border-slate-200 text-slate-700 hover:text-indigo-700 rounded-lg text-[10px] font-bold transition-colors" title="클릭하여 학생/학부모 전환">
+            👤 <span id="label-role">학생 모드 (민우)</span> ⇄
+          </button>
           <button id="btn-open-share-modal" class="p-2 text-indigo-600 hover:bg-indigo-50 rounded-full transition-colors relative" aria-label="시간표 공유 및 가족 동기화 열기" title="시간표 공유">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
             <span class="absolute top-1 right-1 w-2 h-2 bg-indigo-500 rounded-full animate-ping"></span>
@@ -136,12 +134,32 @@
       <!-- SCROLLABLE APP BODY -->
       <div id="app-body" class="flex-1 overflow-y-auto overflow-x-hidden no-scrollbar bg-slate-100/70 p-3 space-y-3">
 
+        <!-- INCOMING SYNC PROMPT BANNER -->
+        <section id="banner-incoming-sync" class="hidden bg-emerald-600 text-white p-3 rounded-2xl shadow-lg border border-emerald-400 flex flex-col gap-2 animate-in fade-in duration-300">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="text-xl">📥</span>
+              <div>
+                <div class="font-bold text-xs" id="incoming-sync-title">새로운 시간표 데이터 도착!</div>
+                <p class="text-[11px] text-emerald-100" id="incoming-sync-desc">학생의 시간표를 이 폰에 즉시 동기화할 수 있습니다.</p>
+              </div>
+            </div>
+            <button id="btn-close-sync-banner" class="text-emerald-200 hover:text-white text-base font-bold" aria-label="배너 닫기">&times;</button>
+          </div>
+          <div class="flex items-center gap-2 pt-1">
+            <button id="btn-apply-incoming-sync" class="flex-1 py-1.5 bg-white text-emerald-900 font-bold rounded-lg text-xs shadow-sm hover:bg-emerald-50 transition-colors">
+              지금 내 폰에 동기화하기 (적용)
+            </button>
+          </div>
+        </section>
+
+
         <!-- TODAY FOCUS / NEXT CLASS CARD -->
         <section id="section-today-summary" class="bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 rounded-2xl p-4 text-white shadow-md relative overflow-hidden">
           <div class="absolute -right-4 -bottom-6 w-28 h-28 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
           <div class="flex items-center justify-between text-xs text-indigo-200 mb-1">
             <span id="current-date-korean" class="font-medium">2026년 11월 9일 (월요일)</span>
-            <span class="px-2 py-0.5 bg-white/20 rounded-md text-[11px] font-medium backdrop-blur-sm">실시간 동기화됨</span>
+            <span id="summary-student-badge" class="px-2 py-0.5 bg-white/20 rounded-md text-[11px] font-bold backdrop-blur-sm">김민우 학생 시간표</span>
           </div>
           
           <div class="mt-2">
@@ -249,6 +267,25 @@
 
         <!-- ================= TAB 4: SUBJECT MANAGEMENT LIST ================= -->
         <section id="tab-pane-list" class="tab-content hidden space-y-2.5">
+          <!-- PROFILE SETTINGS CARD IN TAB 4 -->
+          <div class="bg-indigo-50/80 p-3 rounded-xl border border-indigo-200 shadow-sm flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-base font-bold shadow-sm shrink-0">
+                👤
+              </div>
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <span class="font-bold text-xs text-indigo-950" id="tab-profile-name">김민우 (학생)</span>
+                  <span class="text-[10px] text-indigo-700 font-semibold" id="tab-profile-parent">· 보호자: 엄마</span>
+                </div>
+                <p class="text-[11px] text-indigo-800 font-medium" id="tab-profile-school">대치고 2학년 이과</p>
+              </div>
+            </div>
+            <button id="btn-tab-edit-profile" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold shadow-sm transition-colors flex items-center gap-1">
+              <span>✏️</span> <span>정보 변경</span>
+            </button>
+          </div>
+
           <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
             <div>
               <h3 class="text-xs font-bold text-slate-800">등록된 과목 목록 (<span id="total-subject-count">4</span>)</h3>
@@ -288,13 +325,13 @@
 
       <!-- HOME INDICATOR (iOS) or SYSTEM NAV BUTTONS (Android) -->
       <div id="phone-hardware-bottom" class="w-full py-1.5 bg-white flex justify-center items-center z-30 shrink-0">
-        <!-- iOS Home bar -->
-        <div id="ios-home-bar" class="w-32 h-1 bg-slate-900 rounded-full"></div>
-        <!-- Android nav buttons (hidden in iOS mode) -->
-        <div id="android-nav-bar" class="hidden w-full px-8 py-1 flex items-center justify-between text-slate-400">
-          <span>|||</span>
-          <span>●</span>
-          <span>&lt;</span>
+        <!-- iOS Home bar (hidden in Android mode) -->
+        <div id="ios-home-bar" class="hidden w-32 h-1 bg-slate-900 rounded-full"></div>
+        <!-- Android nav buttons (Galaxy One UI style) -->
+        <div id="android-nav-bar" class="w-full px-8 py-1 flex items-center justify-between text-slate-400 text-sm font-bold">
+          <span class="hover:text-slate-600 cursor-pointer">|||</span>
+          <span class="hover:text-slate-600 cursor-pointer">●</span>
+          <span class="hover:text-slate-600 cursor-pointer">&lt;</span>
         </div>
       </div>
 
@@ -390,7 +427,7 @@
 
             <div class="pt-2 flex items-center gap-2">
               <button type="button" id="btn-cancel-form" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition-colors">취소</button>
-              <button type="submit" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md transition-colors">저장하기</button>
+              <button type="submit" id="btn-save-profile" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md transition-colors">저장하기</button>
             </div>
           </form>
         </div>
@@ -460,65 +497,99 @@
       </div>
 
       <!-- ================= MODAL 3: SHARING & SYNC (핵심 공유 기능) ================= -->
+      <!-- ================= MODAL 3: SHARING & SYNC (실시간 양방향 동기화) ================= -->
       <div id="modal-share" class="hidden absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col justify-end">
-        <div class="bg-white rounded-t-3xl max-h-[90%] p-4 flex flex-col overflow-hidden shadow-2xl animate-in slide-in-from-bottom duration-200">
+        <div class="bg-white rounded-t-3xl max-h-[92%] p-4 flex flex-col overflow-hidden shadow-2xl animate-in slide-in-from-bottom duration-200">
           <div class="flex items-center justify-between border-b border-slate-100 pb-2.5 mb-2.5 shrink-0">
             <div>
               <h3 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
-                <span>📲 학원 시간표 & 특이사항 공유</span>
+                <span>📲 학생 ↔ 학부모 시간표 실시간 동기화</span>
               </h3>
-              <p class="text-[11px] text-slate-400">카톡 공유 및 학생-학부모 폰 동기화</p>
+              <p class="text-[11px] text-slate-400">링크나 코드로 다른 스마트폰에 시간표 즉시 연동</p>
             </div>
             <button id="btn-close-share-modal" class="text-slate-400 hover:text-slate-600 text-xl font-bold" aria-label="닫기">&times;</button>
           </div>
 
           <div class="overflow-y-auto no-scrollbar space-y-3.5 text-xs">
             
-            <!-- METHOD 1: KAKAO / SMS TEXT FORMAT PREVIEW & COPY -->
-            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
-              <div class="flex items-center justify-between mb-1.5">
-                <span class="font-bold text-slate-800">1. 메신저 공유용 텍스트 미리보기</span>
-                <span class="text-[10px] bg-yellow-100 text-yellow-800 px-1.5 py-0.5 rounded font-semibold">카톡 / 문자용</span>
+            <!-- METHOD 1: 1-CLICK DIRECT SYNC LINK -->
+            <div class="bg-indigo-50/90 p-3 rounded-xl border border-indigo-200 shadow-sm space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-indigo-950 flex items-center gap-1">
+                  <span>🔗 1초 다이렉트 동기화 링크</span>
+                </span>
+                <span class="text-[10px] bg-indigo-200 text-indigo-900 font-bold px-1.5 py-0.5 rounded">원클릭 연동</span>
               </div>
-              <textarea id="share-text-preview" readonly rows="5" class="w-full p-2 bg-white rounded-lg border border-slate-200 text-[11px] font-mono text-slate-700 leading-relaxed no-scrollbar resize-none"></textarea>
+              <p class="text-[11px] text-indigo-800 leading-snug">
+                아래 링크를 카카오톡으로 보내면, 상대방이 링크를 누르는 즉시 해당 스마트폰에 시간표와 특이사항이 동기화됩니다.
+              </p>
+              <button id="btn-copy-sync-link" class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-lg shadow-sm flex items-center justify-center gap-1.5 transition-colors">
+                <span>🔗 1-클릭 동기화 링크 복사</span>
+              </button>
+            </div>
+
+            <!-- METHOD 2: SYNC CODE (코드 복사 및 직접 붙여넣기) -->
+            <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800">🔑 동기화 코드 직접 입력 (가져오기)</span>
+                <span class="text-[10px] bg-slate-200 text-slate-700 font-semibold px-1.5 py-0.5 rounded">수동 연동</span>
+              </div>
+              
+              <!-- 내 코드 복사 버튼 -->
+              <div class="flex items-center gap-2">
+                <div class="flex-1 bg-white p-2 rounded-lg border border-slate-200 text-slate-600 text-[11px] truncate font-mono" id="display-sync-code">
+                  [김민우 학생 시간표 암호화 토큰]
+                </div>
+                <button id="btn-copy-sync-code" class="px-3 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-bold shrink-0 transition-colors">
+                  코드 복사
+                </button>
+              </div>
+
+              <!-- 상대방 코드 붙여넣어 동기화 적용 -->
+              <div class="pt-2 border-t border-slate-200/80 flex flex-col gap-1.5">
+                <label for="input-import-code" class="text-[11px] font-bold text-slate-700">상대방 폰에서 받은 코드/링크 붙여넣기:</label>
+                <div class="flex items-center gap-1.5">
+                  <input type="text" id="input-import-code" placeholder="동기화 코드 또는 링크 붙여넣기" class="flex-1 px-2.5 py-2 bg-white border border-slate-300 rounded-lg text-xs font-mono focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <button id="btn-import-code" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold shrink-0 shadow-sm transition-colors">
+                    동기화 적용
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- METHOD 3: KAKAO / SMS TEXT FORMAT PREVIEW & COPY -->
+            <div class="bg-amber-50/70 p-3 rounded-xl border border-amber-200 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-amber-950">💬 메신저 공유용 텍스트 (시간표+동기화링크 포함)</span>
+                <span class="text-[10px] bg-yellow-200 text-yellow-900 px-1.5 py-0.5 rounded font-bold">카톡/문자</span>
+              </div>
+              <textarea id="share-text-preview" readonly rows="5" class="w-full p-2 bg-white rounded-lg border border-amber-200 text-[11px] font-mono text-slate-700 leading-relaxed no-scrollbar resize-none"></textarea>
               <button id="btn-copy-share-text" class="mt-2 w-full py-2 bg-yellow-400 hover:bg-yellow-500 text-yellow-950 font-bold rounded-lg shadow-sm flex items-center justify-center gap-1.5 transition-colors">
                 <span>💬 카카오톡 / 문자 공유 텍스트 복사</span>
               </button>
             </div>
 
-            <!-- METHOD 2: CLOUD SYNC CODE (INVITE CODE) -->
-            <div class="bg-indigo-50/70 p-3 rounded-xl border border-indigo-200">
-              <span class="font-bold text-indigo-950 block mb-1">2. 가족 스마트폰 실시간 동기화 코드</span>
-              <p class="text-[11px] text-indigo-800 mb-2">학생이 생성한 코드를 부모님 폰에 입력하면 동일한 시간표가 즉시 연동됩니다.</p>
-              
-              <div class="flex items-center gap-2 mb-2">
-                <div class="flex-1 bg-white p-2 rounded-lg border border-indigo-200 text-center font-mono font-bold text-indigo-600 text-sm tracking-wider" id="display-sync-code">
-                  EDU-2026-MW77
-                </div>
-                <button id="btn-copy-sync-code" class="px-3 py-2 bg-indigo-600 text-white rounded-lg font-bold hover:bg-indigo-700 transition-colors">
-                  코드 복사
-                </button>
-              </div>
-
-              <!-- Input code to import -->
-              <div class="pt-2 border-t border-indigo-200/60 flex items-center gap-1.5">
-                <input type="text" id="input-import-code" placeholder="상대방 공유 코드 입력" class="flex-1 px-2.5 py-1.5 bg-white border border-indigo-200 rounded-lg text-xs font-mono uppercase focus:outline-none">
-                <button id="btn-import-code" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded-lg font-bold transition-colors">
-                  동기화 적용
-                </button>
-              </div>
-            </div>
-
-            <!-- METHOD 3: SIMULATE SHARE API (Web Share) -->
+            <!-- METHOD 4: NATIVE WEB SHARE API -->
             <button id="btn-native-share" class="w-full py-2.5 bg-slate-900 hover:bg-black text-white font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm transition-colors">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
               <span>스마트폰 시스템 공유창 열기 (iOS/Android)</span>
             </button>
+
+            <!-- METHOD 5: BACKUP / RESTORE JSON FILE -->
+            <div class="flex items-center justify-between pt-1 border-t border-slate-100 text-[11px] text-slate-500">
+              <span>오프라인 백업:</span>
+              <div class="flex items-center gap-2">
+                <button id="btn-export-json" class="text-indigo-600 hover:text-indigo-800 underline font-medium">시간표 파일 저장(JSON)</button>
+                <span>|</span>
+                <button id="btn-import-json-trigger" class="text-indigo-600 hover:text-indigo-800 underline font-medium">시간표 파일 불러오기</button>
+                <input type="file" id="file-import-json" accept=".json" class="hidden">
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      
       <!-- ================= MODAL 4: EDIT PROFILE (학생, 학부모, 학교 변경) ================= -->
       <div id="modal-profile" class="hidden absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col justify-end">
         <div class="bg-white rounded-t-3xl max-h-[85%] p-4 flex flex-col overflow-hidden shadow-2xl animate-in slide-in-from-bottom duration-200">
@@ -689,15 +760,36 @@
     function updateProfileUI() {
       const roleLabel = document.getElementById("label-role");
       const schoolLabel = document.getElementById("label-school-grade");
-      if (roleLabel) {
-        if (currentRole === "student") {
-          roleLabel.textContent = `학생 모드 (${userProfile.studentName})`;
-        } else {
-          roleLabel.textContent = `학부모 모드 (${userProfile.parentName})`;
-        }
+      const studentDisplay = document.getElementById("label-student-display");
+      const summaryBadge = document.getElementById("summary-student-badge");
+      const tabProfileName = document.getElementById("tab-profile-name");
+      const tabProfileParent = document.getElementById("tab-profile-parent");
+      const tabProfileSchool = document.getElementById("tab-profile-school");
+
+      if (studentDisplay) {
+        studentDisplay.textContent = `${userProfile.studentName} 학생`;
       }
       if (schoolLabel) {
         schoolLabel.textContent = userProfile.schoolName;
+      }
+      if (roleLabel) {
+        if (currentRole === "student") {
+          roleLabel.textContent = `학생 (${userProfile.studentName})`;
+        } else {
+          roleLabel.textContent = `학부모 (${userProfile.parentName})`;
+        }
+      }
+      if (summaryBadge) {
+        summaryBadge.textContent = `${userProfile.studentName} 학생 시간표`;
+      }
+      if (tabProfileName) {
+        tabProfileName.textContent = `${userProfile.studentName} (학생)`;
+      }
+      if (tabProfileParent) {
+        tabProfileParent.textContent = `· 보호자: ${userProfile.parentName}`;
+      }
+      if (tabProfileSchool) {
+        tabProfileSchool.textContent = userProfile.schoolName;
       }
     }
 
@@ -1085,12 +1177,122 @@
     }
 
     // Generate Share Formatted Text (카톡/문자 공유 텍스트)
+        // ================= REAL SYNC ENGINE (UTF-8 BASE64 & URL LINK) =================
+    function encodeSyncData(data) {
+      try {
+        const jsonStr = JSON.stringify(data);
+        const bytes = new TextEncoder().encode(jsonStr);
+        let binString = "";
+        for (let i = 0; i < bytes.length; i++) {
+          binString += String.fromCharCode(bytes[i]);
+        }
+        return btoa(binString);
+      } catch (err) {
+        console.error("Encode error:", err);
+        return null;
+      }
+    }
+
+    function decodeSyncData(encodedStr) {
+      try {
+        if (!encodedStr) return null;
+        let clean = encodedStr.trim();
+        if (clean.includes("#sync=")) {
+          clean = clean.split("#sync=")[1].split("&")[0];
+        } else if (clean.includes("?sync=")) {
+          clean = clean.split("?sync=")[1].split("&")[0];
+        }
+        if (clean.startsWith("EDU-SYNC-")) {
+          clean = clean.substring("EDU-SYNC-".length);
+        }
+        try {
+          clean = decodeURIComponent(clean);
+        } catch (_) {}
+        const binString = atob(clean);
+        const bytes = new Uint8Array(binString.length);
+        for (let i = 0; i < binString.length; i++) {
+          bytes[i] = binString.charCodeAt(i);
+        }
+        const jsonStr = new TextDecoder().decode(bytes);
+        const parsed = JSON.parse(jsonStr);
+        if (!parsed || !parsed.schedules || !Array.isArray(parsed.schedules)) {
+          return null;
+        }
+        return parsed;
+      } catch (err) {
+        console.error("Decode error:", err);
+        return null;
+      }
+    }
+
+    function getSyncPayload() {
+      return {
+        v: 1,
+        timestamp: Date.now(),
+        profile: userProfile,
+        schedules: schedules
+      };
+    }
+
+    function getSyncUrl() {
+      const token = encodeSyncData(getSyncPayload()) || "";
+      const baseUrl = window.location.href.split("#")[0].split("?")[0];
+      return `${baseUrl}#sync=${token}`;
+    }
+
+    function applySyncData(data, successMessage = "시간표가 성공적으로 동기화되었습니다! ✨") {
+      if (!data || !data.schedules || !Array.isArray(data.schedules)) {
+        showToast("동기화 데이터가 올바르지 않습니다.", "❌");
+        return false;
+      }
+      if (data.profile) {
+        userProfile = {
+          studentName: data.profile.studentName || userProfile.studentName,
+          parentName: data.profile.parentName || userProfile.parentName,
+          schoolName: data.profile.schoolName || userProfile.schoolName
+        };
+        saveProfile();
+      }
+      schedules = JSON.parse(JSON.stringify(data.schedules));
+      saveSchedules();
+      refreshAllViews();
+      showToast(successMessage, "🎉");
+      return true;
+    }
+
+    let pendingIncomingSync = null;
+    function checkUrlHashSync() {
+      if (window.location.hash && window.location.hash.includes("#sync=")) {
+        const data = decodeSyncData(window.location.hash);
+        if (data && data.schedules) {
+          pendingIncomingSync = data;
+          const banner = document.getElementById("banner-incoming-sync");
+          const title = document.getElementById("incoming-sync-title");
+          const desc = document.getElementById("incoming-sync-desc");
+          if (banner && title && desc) {
+            title.textContent = `📥 [${data.profile?.studentName || "학생"}] 시간표 도착!`;
+            desc.textContent = `총 ${data.schedules.length}개 과목 및 특이사항이 포함되어 있습니다.`;
+            banner.classList.remove("hidden");
+          }
+        }
+      }
+    }
+
     function updateShareText() {
       const textarea = document.getElementById("share-text-preview");
+      const codeSummary = document.getElementById("display-sync-code");
       if (!textarea) return;
 
+      const syncPayload = getSyncPayload();
+      const syncToken = encodeSyncData(syncPayload) || "";
+      const syncUrl = getSyncUrl();
+
+      if (codeSummary) {
+        codeSummary.textContent = `EDU-SYNC-${syncToken.substring(0, 18)}... (${userProfile.studentName} 과목 ${schedules.length}개)`;
+      }
+
       let text = `[에듀스케줄 - 학생 학원 시간표 & 특이사항 공유]\n`;
-      text += `학생: ${userProfile.studentName} (${userProfile.schoolName}) | 보호자: ${userProfile.parentName} | 업데이트: 2026.11.09\n`;
+      text += `학생: ${userProfile.studentName} (${userProfile.schoolName}) | 보호자: ${userProfile.parentName}\n`;
       text += `------------------------------------\n\n`;
 
       DAYS_ORDER.forEach(day => {
@@ -1114,8 +1316,11 @@
       });
 
       text += `------------------------------------\n`;
-      text += `가족 연동 동기화 코드: EDU-2026-MW77\n`;
-      text += `(에듀스케줄 앱에서 코드 입력 시 동일하게 연동됩니다)`;
+      text += `📲 [1초 스마트폰 시간표 자동 연동 링크]:\n`;
+      text += `${syncUrl}\n\n`;
+      text += `🔑 [동기화 코드]:\n`;
+      text += `EDU-SYNC-${syncToken}\n`;
+      text += `(위 링크를 터치하거나 앱에서 코드를 입력하면 내 스마트폰에 즉시 동기화됩니다)`;
 
       textarea.value = text;
     }
@@ -1258,7 +1463,10 @@
     window.addEventListener("DOMContentLoaded", () => {
       loadProfile();
       loadSchedules();
+      setDeviceMode("android");
       refreshAllViews();
+      checkUrlHashSync();
+      window.addEventListener("hashchange", checkUrlHashSync);
 
       // Tab Switching
       const tabs = [
@@ -1358,34 +1566,38 @@
       // Profile Modal Listeners
       const profileModal = document.getElementById("modal-profile");
       const btnOpenProfile = document.getElementById("btn-open-profile-modal");
+      const btnTabEditProfile = document.getElementById("btn-tab-edit-profile");
       const btnCloseProfile = document.getElementById("btn-close-profile-modal");
       const btnCancelProfile = document.getElementById("btn-cancel-profile");
+      const btnSaveProfile = document.getElementById("btn-save-profile");
       const formProfile = document.getElementById("form-profile");
       const inputStudent = document.getElementById("input-student-name");
       const inputParent = document.getElementById("input-parent-name");
       const inputSchool = document.getElementById("input-school-name");
 
-      btnOpenProfile.addEventListener("click", () => {
+      function openProfileModal() {
         inputStudent.value = userProfile.studentName;
         inputParent.value = userProfile.parentName;
         inputSchool.value = userProfile.schoolName;
         profileModal.classList.remove("hidden");
-      });
+      }
 
       function closeProfileModal() {
         profileModal.classList.add("hidden");
       }
 
-      btnCloseProfile.addEventListener("click", closeProfileModal);
-      btnCancelProfile.addEventListener("click", closeProfileModal);
+      if (btnOpenProfile) btnOpenProfile.addEventListener("click", openProfileModal);
+      if (btnTabEditProfile) btnTabEditProfile.addEventListener("click", openProfileModal);
+      if (btnCloseProfile) btnCloseProfile.addEventListener("click", closeProfileModal);
+      if (btnCancelProfile) btnCancelProfile.addEventListener("click", closeProfileModal);
 
-      formProfile.addEventListener("submit", (e) => {
-        e.preventDefault();
+      function handleSaveProfile(e) {
+        if (e) e.preventDefault();
         const sName = inputStudent.value.trim();
         const pName = inputParent.value.trim();
         const scName = inputSchool.value.trim();
         if (!sName || !pName || !scName) {
-          showToast("모든 항목을 입력해주세요.", "⚠️");
+          showToast("모든 항목(학생 이름, 학부모, 학교)을 입력해주세요.", "⚠️");
           return;
         }
         userProfile.studentName = sName;
@@ -1395,8 +1607,18 @@
         updateProfileUI();
         updateShareText();
         closeProfileModal();
-        showToast("학생·학부모·학교 정보가 성공적으로 변경되었습니다! 🎉");
-      });
+        showToast(`'${sName}' 학생 및 학교 정보가 성공적으로 변경되었습니다! 🎉`);
+      }
+
+      if (formProfile) formProfile.addEventListener("submit", handleSaveProfile);
+      if (btnSaveProfile) {
+        btnSaveProfile.addEventListener("click", (e) => {
+          // If valid, submit directly
+          if (inputStudent.value.trim() && inputParent.value.trim() && inputSchool.value.trim()) {
+            handleSaveProfile(e);
+          }
+        });
+      }
 
       // Share Modal
       const shareModal = document.getElementById("modal-share");
@@ -1412,30 +1634,104 @@
         shareModal.classList.add("hidden");
       });
 
-      // Copy Share Text
+      // Copy Direct 1-Click Sync Link
+      document.getElementById("btn-copy-sync-link").addEventListener("click", () => {
+        const url = getSyncUrl();
+        copyToClipboard(url, "1초 동기화 링크가 복사되었습니다! 카톡으로 공유하세요 🔗");
+      });
+
+      // Copy Share Text (카카오톡 전체 텍스트)
       document.getElementById("btn-copy-share-text").addEventListener("click", () => {
         const text = document.getElementById("share-text-preview").value;
-        copyToClipboard(text, "카카오톡/문자용 시간표 텍스트가 복사되었습니다!");
+        copyToClipboard(text, "전체 시간표와 동기화 링크가 복사되었습니다! 💬");
       });
 
       // Copy Sync Code
       document.getElementById("btn-copy-sync-code").addEventListener("click", () => {
-        const code = document.getElementById("display-sync-code").textContent.trim();
-        copyToClipboard(code, "가족 동기화 코드가 복사되었습니다! (상대방 스마트폰에 입력하세요)");
+        const token = encodeSyncData(getSyncPayload()) || "";
+        const code = `EDU-SYNC-${token}`;
+        copyToClipboard(code, "동기화 코드가 복사되었습니다! (상대방 폰에 붙여넣기)");
       });
 
-      // Import Sync Code
+      // Import Sync Code or Link
       document.getElementById("btn-import-code").addEventListener("click", () => {
         const input = document.getElementById("input-import-code");
-        const val = input.value.trim().toUpperCase();
+        const val = input.value.trim();
         if (!val) {
-          showToast("공유 코드를 입력해주세요.", "⚠️");
+          showToast("동기화 코드나 링크를 입력해주세요.", "⚠️");
           return;
         }
-        // Simulation: Reset or update schedules from code
-        showToast("가족 시간표가 성공적으로 동기화되었습니다! ✨");
-        input.value = "";
-        shareModal.classList.add("hidden");
+        const data = decodeSyncData(val);
+        if (data) {
+          applySyncData(data, `[${data.profile?.studentName || "학생"}] 시간표 ${data.schedules.length}개가 완벽히 동기화되었습니다! ✨`);
+          input.value = "";
+          shareModal.classList.add("hidden");
+        } else {
+          showToast("올바른 동기화 코드/링크가 아닙니다. 다시 확인해주세요.", "❌");
+        }
+      });
+
+      // Incoming Sync Banner Actions
+      document.getElementById("btn-apply-incoming-sync").addEventListener("click", () => {
+        if (pendingIncomingSync) {
+          applySyncData(pendingIncomingSync, `[${pendingIncomingSync.profile?.studentName || "학생"}] 시간표가 동기화되었습니다! ✨`);
+          document.getElementById("banner-incoming-sync").classList.add("hidden");
+          try {
+            history.replaceState(null, "", window.location.pathname);
+          } catch (_) {}
+          pendingIncomingSync = null;
+        }
+      });
+
+      document.getElementById("btn-close-sync-banner").addEventListener("click", () => {
+        document.getElementById("banner-incoming-sync").classList.add("hidden");
+        try {
+          history.replaceState(null, "", window.location.pathname);
+        } catch (_) {}
+        pendingIncomingSync = null;
+      });
+
+      // JSON File Export (Backup)
+      document.getElementById("btn-export-json").addEventListener("click", () => {
+        const payload = getSyncPayload();
+        const jsonStr = JSON.stringify(payload, null, 2);
+        const blob = new Blob([jsonStr], { type: "application/json" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `시간표_${userProfile.studentName}_${new Date().toISOString().slice(0, 10)}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast("시간표 백업 파일이 다운로드되었습니다! 💾");
+      });
+
+      // JSON File Import (Restore)
+      const fileInput = document.getElementById("file-import-json");
+      document.getElementById("btn-import-json-trigger").addEventListener("click", () => {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const data = JSON.parse(event.target.result);
+            if (data && data.schedules) {
+              applySyncData(data, `파일에서 [${data.profile?.studentName || "학생"}] 시간표를 성공적으로 불러왔습니다! 📂`);
+              shareModal.classList.add("hidden");
+            } else {
+              showToast("유효한 시간표 파일이 아닙니다.", "❌");
+            }
+          } catch (err) {
+            showToast("파일 읽기 오류가 발생했습니다.", "❌");
+          }
+          fileInput.value = "";
+        };
+        reader.readAsText(file);
       });
 
       // Native Web Share API
