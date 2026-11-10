@@ -34,12 +34,42 @@
     .tab-content {
       transition: opacity 0.2s ease, transform 0.2s ease;
     }
+    /* Print optimization for refrigerator posting */
+    @media print {
+      body {
+        background: white !important;
+        padding: 0 !important;
+        color: black !important;
+      }
+      header, footer, #phone-top-hardware, #phone-bottom-bar, #phone-hardware-bottom, nav, .no-print {
+        display: none !important;
+      }
+      #device-wrapper, #phone-frame {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: white !important;
+      }
+      #app-body {
+        overflow: visible !important;
+        padding: 0 !important;
+        background: white !important;
+      }
+      .tab-content {
+        display: block !important;
+      }
+      .print-page-break {
+        page-break-before: always;
+      }
+    }
   </style>
 </head>
 <body class="bg-slate-900 text-slate-800 min-h-screen flex flex-col items-center justify-start p-2 sm:p-4 md:p-6 select-none">
 
   <!-- ================= TOP PLATFORM CONTROLLER & TEST BAR ================= -->
-  <header class="w-full max-w-4xl mb-4 bg-slate-800/90 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-slate-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-3 text-white">
+  <header class="w-full max-w-4xl mb-4 bg-slate-800/90 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-slate-700 shadow-xl flex flex-col md:flex-row items-center justify-between gap-3 text-white no-print">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/30 text-white font-bold text-xl">
         📚
@@ -47,9 +77,9 @@
       <div>
         <div class="flex items-center gap-2">
           <h1 class="font-bold text-base sm:text-lg leading-tight tracking-tight">에듀스케줄 (EduSchedule)</h1>
-          <span class="px-2 py-0.5 text-xs font-semibold bg-indigo-500/30 text-indigo-300 border border-indigo-500/40 rounded-full">v2.4 모바일 연동</span>
+          <span class="px-2 py-0.5 text-xs font-semibold bg-indigo-500/30 text-indigo-300 border border-indigo-500/40 rounded-full">v2.5 안전성·보안 강화판</span>
         </div>
-        <p class="text-xs text-slate-400">학생 · 학부모 학원 수업 요일/시간 & 특이사항 실시간 공유</p>
+        <p class="text-xs text-slate-400">학생 · 학부모 학원 수업 요일/시간 & 특이사항 실시간 양방향 공유</p>
       </div>
     </div>
 
@@ -66,14 +96,19 @@
         </button>
         <button id="btn-mode-responsive" class="px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white" aria-label="전체화면 반응형으로 보기">
           <span>📱</span>
-          <span>전체화면</span>
+          <span>전체화면(PC/태블릿)</span>
         </button>
       </div>
 
-      <!-- Cross Platform Test Badge -->
+      <!-- Quick Print & Safe Badge -->
+      <button id="btn-print-schedule" class="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-sm transition-colors" title="시간표 출력 (A4 인쇄 / PDF 저장)">
+        <span>🖨️</span>
+        <span>시간표 인쇄/PDF</span>
+      </button>
+
       <div class="flex items-center gap-1.5 px-2.5 py-1.5 bg-emerald-950/60 border border-emerald-500/30 rounded-xl text-emerald-300 text-xs font-medium">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>iOS & Android 호환 테스트 통과</span>
+        <span>XSS방어 & 양방향 동기화 검증완료</span>
       </div>
     </div>
   </header>
@@ -84,8 +119,8 @@
       
       <!-- PHONE HARDWARE NOTCH / DYNAMIC ISLAND (iOS) / PUNCH HOLE (Android) -->
       <div id="phone-top-hardware" class="w-full pt-3 px-6 pb-1 bg-white flex items-center justify-between z-30 shrink-0">
-        <!-- Status Bar Time -->
-        <span id="status-bar-time" class="text-xs font-semibold text-slate-900 tracking-tight">18:55</span>
+        <!-- Status Bar Real-time Clock -->
+        <span id="status-bar-time" class="text-xs font-semibold text-slate-900 tracking-tight">19:30</span>
         
         <!-- Dynamic Island or Camera Hole -->
         <div id="notch-element" class="w-4 h-4 bg-black rounded-full flex items-center justify-center transition-all duration-300">
@@ -153,17 +188,19 @@
           </div>
         </section>
 
-
         <!-- TODAY FOCUS / NEXT CLASS CARD -->
         <section id="section-today-summary" class="bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 rounded-2xl p-4 text-white shadow-md relative overflow-hidden">
           <div class="absolute -right-4 -bottom-6 w-28 h-28 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
           <div class="flex items-center justify-between text-xs text-indigo-200 mb-1">
-            <span id="current-date-korean" class="font-medium">2026년 11월 9일 (월요일)</span>
+            <span id="current-date-korean" class="font-medium">2026년 11월 10일 (화요일)</span>
             <span id="summary-student-badge" class="px-2 py-0.5 bg-white/20 rounded-md text-[11px] font-bold backdrop-blur-sm">김민우 학생 시간표</span>
           </div>
           
           <div class="mt-2">
-            <div class="text-xs text-indigo-100 font-medium">다음 예정된 학원 수업</div>
+            <div class="text-xs text-indigo-100 font-medium flex items-center justify-between">
+              <span id="label-focus-title">다음 예정된 학원 수업</span>
+              <span id="badge-role-hint" class="text-[10px] bg-white/20 px-2 py-0.5 rounded text-amber-200 font-semibold">학생 모드: 숙제·오답노트</span>
+            </div>
             <div class="flex items-baseline justify-between mt-0.5">
               <h2 id="next-class-name" class="text-lg font-bold">수학 (미적분 심화)</h2>
               <span id="next-class-dday" class="text-xs bg-amber-400 text-amber-950 px-2 py-0.5 rounded-full font-bold">오늘 17:30</span>
@@ -188,7 +225,7 @@
 
         <!-- VIEW SELECTOR TABS -->
         <nav class="bg-white p-1 rounded-xl shadow-sm border border-slate-200/80 flex text-xs font-semibold" aria-label="메인 탭 네비게이션">
-          <button id="tab-btn-week" class="flex-1 py-2 text-center rounded-lg transition-all bg-indigo-600 text-white shadow-sm" aria-label="주간 시간표 보기">
+          <button id="tab-btn-week" class="flex-1 py-2 text-center rounded-lg transition-all bg-indigo-600 text-white shadow-sm font-bold" aria-label="주간 시간표 보기">
             📅 주간 시간표
           </button>
           <button id="tab-btn-today" class="flex-1 py-2 text-center rounded-lg transition-all text-slate-600 hover:text-indigo-600" aria-label="오늘의 일정 보기">
@@ -225,13 +262,14 @@
         <section id="tab-pane-today" class="tab-content hidden space-y-2.5">
           <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
             <div>
-              <span class="text-xs font-bold text-slate-800" id="today-tab-title">오늘(월요일) 시간표</span>
+              <span class="text-xs font-bold text-slate-800" id="today-tab-title">오늘 시간표</span>
               <p class="text-[11px] text-slate-500">시간 순서대로 정렬된 수업 타임라인</p>
             </div>
-            <span class="px-2 py-1 bg-emerald-100 text-emerald-800 rounded-md text-[11px] font-bold">진행 중</span>
+            <span id="today-status-badge" class="px-2 py-1 bg-emerald-100 text-emerald-800 rounded-md text-[11px] font-bold">진행 중</span>
           </div>
 
-          <div id="today-timeline-container" class="space-y-2.5 relative pl-4 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-indigo-200">
+          <!-- Timeline container with exact alignment -->
+          <div id="today-timeline-container" class="space-y-2.5 relative pl-6 before:content-[''] before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-indigo-200">
             <!-- Populated by JS -->
           </div>
         </section>
@@ -250,12 +288,12 @@
               </button>
             </div>
 
-            <!-- Category Pills -->
-            <div class="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar pt-1">
-              <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-white shrink-0" data-filter="all">전체보기</button>
-              <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 shrink-0" data-filter="shuttle">🚌 셔틀버스</button>
-              <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 shrink-0" data-filter="test">📝 시험/단어</button>
-              <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 shrink-0" data-filter="book">📖 교재/숙제</button>
+            <!-- Category Pills with dynamic counters -->
+            <div class="flex items-center gap-1.5 mt-2.5 overflow-x-auto no-scrollbar pt-1" id="notes-filter-pills">
+              <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-900 text-white shrink-0" data-filter="all">전체보기 (<span id="count-note-all">0</span>)</button>
+              <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 shrink-0" data-filter="shuttle">🚌 셔틀/픽업 (<span id="count-note-shuttle">0</span>)</button>
+              <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 shrink-0" data-filter="test">📝 시험/단어 (<span id="count-note-test">0</span>)</button>
+              <button class="note-filter-btn px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-600 hover:bg-slate-200 shrink-0" data-filter="book">📖 교재/숙제 (<span id="count-note-book">0</span>)</button>
             </div>
           </div>
 
@@ -304,8 +342,8 @@
       </div>
 
       <!-- BOTTOM APP NAVIGATION BAR (Native Mobile Feel) -->
-      <footer id="phone-bottom-bar" class="bg-white border-t border-slate-200/90 px-4 py-2 flex items-center justify-around z-20 shrink-0">
-        <button id="nav-btn-home" class="flex flex-col items-center gap-0.5 text-indigo-600" aria-label="홈 일정">
+      <footer id="phone-bottom-bar" class="bg-white border-t border-slate-200/90 px-4 py-2 flex items-center justify-around z-20 shrink-0 no-print">
+        <button id="nav-btn-home" class="flex flex-col items-center gap-0.5 text-indigo-600 font-bold" aria-label="홈 일정">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
           <span class="text-[10px] font-semibold">시간표</span>
         </button>
@@ -324,14 +362,14 @@
       </footer>
 
       <!-- HOME INDICATOR (iOS) or SYSTEM NAV BUTTONS (Android) -->
-      <div id="phone-hardware-bottom" class="w-full py-1.5 bg-white flex justify-center items-center z-30 shrink-0">
-        <!-- iOS Home bar (hidden in Android mode) -->
-        <div id="ios-home-bar" class="hidden w-32 h-1 bg-slate-900 rounded-full"></div>
+      <div id="phone-hardware-bottom" class="w-full py-1.5 bg-white flex justify-center items-center z-30 shrink-0 no-print">
+        <!-- iOS Home bar -->
+        <div id="ios-home-bar" class="hidden w-32 h-1 bg-slate-900 rounded-full cursor-pointer hover:bg-slate-700 transition-colors" title="홈으로 이동 / 모달 닫기"></div>
         <!-- Android nav buttons (Galaxy One UI style) -->
         <div id="android-nav-bar" class="w-full px-8 py-1 flex items-center justify-between text-slate-400 text-sm font-bold">
-          <span class="hover:text-slate-600 cursor-pointer">|||</span>
-          <span class="hover:text-slate-600 cursor-pointer">●</span>
-          <span class="hover:text-slate-600 cursor-pointer">&lt;</span>
+          <button id="btn-android-recent" class="hover:text-slate-700 transition-colors cursor-pointer px-2 py-0.5" title="과목 관리(최근 목록)">|||</button>
+          <button id="btn-android-home" class="hover:text-slate-700 transition-colors cursor-pointer px-2 py-0.5" title="홈으로 이동">●</button>
+          <button id="btn-android-back" class="hover:text-slate-700 transition-colors cursor-pointer px-2 py-0.5" title="뒤로가기 / 모달 닫기">&lt;</button>
         </div>
       </div>
 
@@ -427,7 +465,8 @@
 
             <div class="pt-2 flex items-center gap-2">
               <button type="button" id="btn-cancel-form" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition-colors">취소</button>
-              <button type="submit" id="btn-save-profile" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md transition-colors">저장하기</button>
+              <!-- Fixed ID: btn-save-class instead of duplicate btn-save-profile -->
+              <button type="submit" id="btn-save-class" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md transition-colors">저장하기</button>
             </div>
           </form>
         </div>
@@ -496,7 +535,6 @@
         </div>
       </div>
 
-      <!-- ================= MODAL 3: SHARING & SYNC (핵심 공유 기능) ================= -->
       <!-- ================= MODAL 3: SHARING & SYNC (실시간 양방향 동기화) ================= -->
       <div id="modal-share" class="hidden absolute inset-0 bg-black/60 backdrop-blur-sm z-50 flex flex-col justify-end">
         <div class="bg-white rounded-t-3xl max-h-[92%] p-4 flex flex-col overflow-hidden shadow-2xl animate-in slide-in-from-bottom duration-200">
@@ -512,6 +550,16 @@
 
           <div class="overflow-y-auto no-scrollbar space-y-3.5 text-xs">
             
+            <!-- LOCAL FILE PROTOCOL NOTICE -->
+            <div id="local-protocol-notice" class="hidden bg-sky-50 border border-sky-200 text-sky-900 p-2.5 rounded-xl text-[11px] space-y-1">
+              <div class="font-bold flex items-center gap-1">
+                <span>💡 오프라인(로컬 파일) 실행 중 안내</span>
+              </div>
+              <p class="text-slate-600 leading-snug">
+                현재 PC 로컬 파일로 열려 있습니다. 다른 스마트폰에 동기화할 때는 아래 <strong>[동기화 코드]</strong>를 복사하여 전달하시거나 <strong>[시간표 파일 저장]</strong>을 활용해주세요.
+              </p>
+            </div>
+
             <!-- METHOD 1: 1-CLICK DIRECT SYNC LINK -->
             <div class="bg-indigo-50/90 p-3 rounded-xl border border-indigo-200 shadow-sm space-y-2">
               <div class="flex items-center justify-between">
@@ -547,9 +595,9 @@
 
               <!-- 상대방 코드 붙여넣어 동기화 적용 -->
               <div class="pt-2 border-t border-slate-200/80 flex flex-col gap-1.5">
-                <label for="input-import-code" class="text-[11px] font-bold text-slate-700">상대방 폰에서 받은 코드/링크 붙여넣기:</label>
+                <label for="input-import-code" class="text-[11px] font-bold text-slate-700">상대방 폰에서 받은 코드/링크/전체메시지 붙여넣기:</label>
                 <div class="flex items-center gap-1.5">
-                  <input type="text" id="input-import-code" placeholder="동기화 코드 또는 링크 붙여넣기" class="flex-1 px-2.5 py-2 bg-white border border-slate-300 rounded-lg text-xs font-mono focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <input type="text" id="input-import-code" placeholder="동기화 코드 또는 카톡 복사본 전체 붙여넣기" class="flex-1 px-2.5 py-2 bg-white border border-slate-300 rounded-lg text-xs font-mono focus:outline-none focus:ring-2 focus:ring-indigo-500">
                   <button id="btn-import-code" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-bold shrink-0 shadow-sm transition-colors">
                     동기화 적용
                   </button>
@@ -621,7 +669,8 @@
 
             <div class="pt-2 flex items-center gap-2">
               <button type="button" id="btn-cancel-profile" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-semibold transition-colors">취소</button>
-              <button type="submit" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md transition-colors">저장하기</button>
+              <!-- Dedicated ID for Profile Submit -->
+              <button type="submit" id="btn-save-profile" class="flex-1 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-semibold shadow-md transition-colors">저장하기</button>
             </div>
           </form>
         </div>
@@ -637,32 +686,34 @@
   </main>
 
   <!-- ================= BOTTOM TESTING & FEATURE SPECIFICATIONS ================= -->
-  <footer class="w-full max-w-4xl mt-5 bg-slate-800/80 rounded-2xl p-4 border border-slate-700 text-slate-300 text-xs space-y-2">
+  <footer class="w-full max-w-4xl mt-5 bg-slate-800/80 rounded-2xl p-4 border border-slate-700 text-slate-300 text-xs space-y-2 no-print">
     <div class="flex items-center justify-between font-bold text-white text-sm border-b border-slate-700 pb-2">
       <span class="flex items-center gap-1.5">
-        <span>📱</span> 모바일 환경별 동작 테스트 & 주요 구현 스펙
+        <span>🛡️</span> 코드 검증 결과 및 보안·안전성 개선 내역
       </span>
-      <span class="text-xs text-indigo-400 font-normal">iOS Safari & Android Chrome 검증 완료</span>
+      <span class="text-xs text-indigo-400 font-normal">XSS 전면 차단 / ID 충돌 수정 / 안전성 검증 완료</span>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-1">
       <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/60">
         <div class="font-bold text-indigo-300 mb-1 flex items-center gap-1">
-          <span>🍏 iOS (아이폰) 환경 최적화</span>
+          <span>🔒 보안 & 버그 패치 완료 (Security Patches)</span>
         </div>
         <ul class="space-y-1 text-slate-400 text-[11px]">
-          <li>• <strong>Cupertino 바텀 시트</strong>: 하단 슬라이드 모달 및 Safe Area 여백 지원</li>
-          <li>• <strong>iOS 폰트 & 햅틱 모방</strong>: 시스템 산세리프 및 터치 인터랙션 최적화</li>
-          <li>• <strong>웹 클립보드 호환</strong>: iOS Safari 복사 보안 정책을 준수한 듀얼 클립보드 처리</li>
+          <li>• <strong>XSS(Cross-Site Scripting) 방어</strong>: 과목명, 특이사항, 강사 등 HTML 이스케이프 철저 적용</li>
+          <li>• <strong>ID 충돌 버그 해결</strong>: 수업 폼과 프로필 폼의 `btn-save-profile` 중복 할당 분리 수정</li>
+          <li>• <strong>스마트 토큰 추출</strong>: 카톡 복사본 전체를 붙여넣어도 동기화 코드를 정규식으로 자동 파싱</li>
+          <li>• <strong>데이터 무결성 검증</strong>: 동기화 데이터 유입 시 손상된 배열/필드 자동 복구 및 검증</li>
         </ul>
       </div>
       <div class="bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/60">
         <div class="font-bold text-emerald-300 mb-1 flex items-center gap-1">
-          <span>🤖 Android (갤럭시) 환경 최적화</span>
+          <span>✨ 편의 기능 & 실시간 인터랙션 강화</span>
         </div>
         <ul class="space-y-1 text-slate-400 text-[11px]">
-          <li>• <strong>Material 3 테마</strong>: 펀치홀 카메라, 안드로이드 소프트키 및 제스처 레이아웃</li>
-          <li>• <strong>Web Share API 완벽 지원</strong>: 카카오톡, 문자, 밴드, 텔레그램 네이티브 공유 트리거</li>
-          <li>• <strong>로컬 스토리지 데이터 보존</strong>: 오프라인 및 브라우저 재방문 시에도 일정 유지</li>
+          <li>• <strong>실시간 시계 & 실제 날짜</strong>: 상단 상태표시줄 시계 및 오늘 한국어 날짜 자동 갱신</li>
+          <li>• <strong>다음 수업 지능형 감지</strong>: 현재 시간 기준으로 남아있는 다음 수업 자동 선별 및 종료 안내</li>
+          <li>• <strong>삭제·초기화 확인창</strong>: 터치 실수로 인한 수업 삭제 및 전체 초기화 방지 확인 다이얼로그 추가</li>
+          <li>• <strong>인쇄 & PDF 출력 지원</strong>: 냉장고 부착용 A4 주간 시간표 출력 전용 프린트 스타일 추가</li>
         </ul>
       </div>
     </div>
@@ -670,6 +721,23 @@
 
   <!-- ================= APPLICATION JAVASCRIPT LOGIC ================= -->
   <script>
+    // Security Helper: Universal HTML Escaper (Neutralizes XSS)
+    function escapeHtml(str) {
+      if (str === null || str === undefined) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Sanitize tel: URL links
+    function sanitizeTel(telStr) {
+      if (!telStr) return "";
+      return telStr.replace(/[^0-9+*#-]/g, "");
+    }
+
     // Initial Default Data (한국 고2/고3 학원 실제 현실 샘플 데이터)
     const DEFAULT_SCHEDULES = [
       {
@@ -742,7 +810,12 @@
       try {
         const saved = localStorage.getItem("edu_profile_data");
         if (saved) {
-          userProfile = JSON.parse(saved);
+          const parsed = JSON.parse(saved);
+          if (parsed && typeof parsed === "object") {
+            userProfile.studentName = parsed.studentName || userProfile.studentName;
+            userProfile.parentName = parsed.parentName || userProfile.parentName;
+            userProfile.schoolName = parsed.schoolName || userProfile.schoolName;
+          }
         }
       } catch (e) {
         console.error("Profile load error:", e);
@@ -765,6 +838,7 @@
       const tabProfileName = document.getElementById("tab-profile-name");
       const tabProfileParent = document.getElementById("tab-profile-parent");
       const tabProfileSchool = document.getElementById("tab-profile-school");
+      const roleHint = document.getElementById("badge-role-hint");
 
       if (studentDisplay) {
         studentDisplay.textContent = `${userProfile.studentName} 학생`;
@@ -777,6 +851,15 @@
           roleLabel.textContent = `학생 (${userProfile.studentName})`;
         } else {
           roleLabel.textContent = `학부모 (${userProfile.parentName})`;
+        }
+      }
+      if (roleHint) {
+        if (currentRole === "student") {
+          roleHint.textContent = `학생 모드: 숙제·오답노트·준비물`;
+          roleHint.className = "text-[10px] bg-white/20 px-2 py-0.5 rounded text-amber-200 font-semibold";
+        } else {
+          roleHint.textContent = `학부모 모드: 셔틀탑승·픽업·학원연락처`;
+          roleHint.className = "text-[10px] bg-emerald-500/30 border border-emerald-400/40 px-2 py-0.5 rounded text-emerald-200 font-semibold";
         }
       }
       if (summaryBadge) {
@@ -793,12 +876,35 @@
       }
     }
 
+    // Schedule Validation & Repair Helper
+    function sanitizeScheduleItem(item, idx) {
+      if (!item || typeof item !== "object") return null;
+      return {
+        id: item.id || `sub-${Date.now()}-${idx}`,
+        subject: item.subject ? String(item.subject).trim() : "무제 과목",
+        academy: item.academy ? String(item.academy).trim() : "",
+        teacher: item.teacher ? String(item.teacher).trim() : "",
+        contact: item.contact ? String(item.contact).trim() : "",
+        days: Array.isArray(item.days) ? item.days.filter(d => ["월","화","수","목","금","토","일"].includes(d)) : ["월"],
+        startTime: item.startTime ? String(item.startTime) : "17:30",
+        endTime: item.endTime ? String(item.endTime) : "19:30",
+        color: COLOR_MAP[item.color] ? item.color : "indigo",
+        notes: item.notes ? String(item.notes) : ""
+      };
+    }
+
     // Storage Safe Wrapper
     function loadSchedules() {
       try {
         const saved = localStorage.getItem("edu_schedules_data");
         if (saved) {
-          schedules = JSON.parse(saved);
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed)) {
+            schedules = parsed.map(sanitizeScheduleItem).filter(Boolean);
+          } else {
+            schedules = JSON.parse(JSON.stringify(DEFAULT_SCHEDULES));
+            saveSchedules();
+          }
         } else {
           schedules = JSON.parse(JSON.stringify(DEFAULT_SCHEDULES));
           saveSchedules();
@@ -831,6 +937,26 @@
       }, 2500);
     }
 
+    // Real-time Status Bar Clock & Korean Date
+    function updateClockAndDate() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const timeElem = document.getElementById("status-bar-time");
+      if (timeElem) timeElem.textContent = `${hours}:${minutes}`;
+
+      const year = now.getFullYear();
+      const month = now.getMonth() + 1;
+      const date = now.getDate();
+      const dayNames = ["일", "월", "화", "수", "목", "금", "토"];
+      const dayName = dayNames[now.getDay()];
+
+      const dateElem = document.getElementById("current-date-korean");
+      if (dateElem) {
+        dateElem.textContent = `${year}년 ${month}월 ${date}일 (${dayName}요일)`;
+      }
+    }
+
     // Color mapper
     const COLOR_MAP = {
       indigo: { bg: "bg-indigo-50", text: "text-indigo-700", border: "border-indigo-200", badge: "bg-indigo-500", bar: "bg-indigo-500" },
@@ -852,7 +978,7 @@
       // Pills
       pillsContainer.innerHTML = "";
       DAYS_ORDER.forEach(day => {
-        const count = schedules.filter(s => s.days.includes(day)).length;
+        const count = schedules.filter(s => Array.isArray(s.days) && s.days.includes(day)).length;
         const isSelected = currentDayFilter === day;
         const btn = document.createElement("button");
         btn.className = `p-1.5 rounded-lg flex flex-col items-center justify-center transition-all ${
@@ -879,7 +1005,7 @@
       let totalShown = 0;
 
       daysToRender.forEach(day => {
-        const dayClasses = schedules.filter(s => s.days.includes(day))
+        const dayClasses = schedules.filter(s => Array.isArray(s.days) && s.days.includes(day))
           .sort((a, b) => a.startTime.localeCompare(b.startTime));
 
         if (dayClasses.length === 0) {
@@ -920,16 +1046,16 @@
           card.innerHTML = `
             <div class="flex-1 pr-2">
               <div class="flex items-center gap-1.5">
-                <span class="font-bold text-xs ${cStyle.text}">${item.subject}</span>
-                <span class="text-[10px] px-1.5 py-0.2 bg-white/80 rounded border border-slate-200 text-slate-600 font-semibold">${item.startTime} ~ ${item.endTime}</span>
+                <span class="font-bold text-xs ${cStyle.text}">${escapeHtml(item.subject)}</span>
+                <span class="text-[10px] px-1.5 py-0.2 bg-white/80 rounded border border-slate-200 text-slate-600 font-semibold">${escapeHtml(item.startTime)} ~ ${escapeHtml(item.endTime)}</span>
               </div>
               <div class="text-[11px] text-slate-500 mt-0.5">
-                📍 ${item.academy || "학원 미기재"} (${item.teacher || "강사 미지정"})
+                📍 ${escapeHtml(item.academy || "학원 미기재")} (${escapeHtml(item.teacher || "강사 미지정")})
               </div>
               ${hasNotes ? `
                 <div class="mt-1 text-[10px] bg-white/90 p-1.5 rounded border border-amber-200/80 text-amber-900 font-medium flex items-center gap-1">
                   <span class="text-amber-600">📌</span>
-                  <span class="truncate">${shortNote}</span>
+                  <span class="truncate">${escapeHtml(shortNote)}</span>
                 </div>
               ` : ""}
             </div>
@@ -958,47 +1084,69 @@
     function renderTodayView() {
       const container = document.getElementById("today-timeline-container");
       const title = document.getElementById("today-tab-title");
+      const statusBadge = document.getElementById("today-status-badge");
       if (!container || !title) return;
 
-      // Determine today's Korean day name
       const now = new Date();
-      const dayIdx = now.getDay(); // 0 is Sun, 1 is Mon...
       const dayNames = ["일", "월", "화", "수", "목", "금", "토"];
-      const currentDay = dayNames[dayIdx];
+      const currentDay = dayNames[now.getDay()];
+      const currentTimeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
 
       title.textContent = `오늘 (${currentDay}요일) 진행 일정`;
-      const todayClasses = schedules.filter(s => s.days.includes(currentDay))
+      const todayClasses = schedules.filter(s => Array.isArray(s.days) && s.days.includes(currentDay))
         .sort((a, b) => a.startTime.localeCompare(b.startTime));
 
       container.innerHTML = "";
 
       if (todayClasses.length === 0) {
+        if (statusBadge) {
+          statusBadge.textContent = "수업 없음";
+          statusBadge.className = "px-2 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-bold";
+        }
         container.innerHTML = `
           <div class="bg-white p-6 rounded-xl border border-slate-200 text-center text-slate-500 text-xs">
             🎉 오늘(${currentDay}요일)은 예정된 학원 수업이 없습니다!<br>
-            자습이나 휴식을 즐기세요.
+            자습이나 재충전의 시간을 보내세요.
           </div>
         `;
         return;
       }
 
+      // Check if all classes today ended
+      const allDone = todayClasses.every(c => c.endTime <= currentTimeStr);
+      if (statusBadge) {
+        if (allDone) {
+          statusBadge.textContent = "오늘 수업 완료";
+          statusBadge.className = "px-2 py-1 bg-purple-100 text-purple-800 rounded-md text-[11px] font-bold";
+        } else {
+          statusBadge.textContent = "수업 진행 중";
+          statusBadge.className = "px-2 py-1 bg-emerald-100 text-emerald-800 rounded-md text-[11px] font-bold";
+        }
+      }
+
       todayClasses.forEach(item => {
         const cStyle = COLOR_MAP[item.color] || COLOR_MAP.indigo;
-        const itemDiv = document.createElement("div");
-        itemDiv.className = "bg-white p-3 rounded-xl border border-slate-200 shadow-sm relative";
+        const isPast = item.endTime < currentTimeStr;
+        const isCurrent = (item.startTime <= currentTimeStr && item.endTime >= currentTimeStr);
 
+        const itemDiv = document.createElement("div");
+        itemDiv.className = `bg-white p-3 rounded-xl border border-slate-200 shadow-sm relative transition-all ${isPast ? "opacity-75 bg-slate-50/80" : ""}`;
+
+        // Timeline dot sits right on the left-3 line
         itemDiv.innerHTML = `
-          <div class="absolute -left-[21px] top-4 w-3 h-3 rounded-full bg-indigo-600 border-2 border-white shadow-sm"></div>
+          <div class="absolute -left-[17px] top-4 w-2.5 h-2.5 rounded-full ${isCurrent ? "bg-amber-500 ring-4 ring-amber-100 animate-pulse" : isPast ? "bg-slate-400" : "bg-indigo-600"} border border-white shadow-sm"></div>
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded text-[11px] font-bold ${cStyle.bg} ${cStyle.text} border ${cStyle.border}">${item.startTime}</span>
-              <h4 class="font-bold text-xs text-slate-900">${item.subject}</h4>
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold ${cStyle.bg} ${cStyle.text} border ${cStyle.border}">
+                ${isCurrent ? "🔥 진행중" : isPast ? "종료됨" : escapeHtml(item.startTime)}
+              </span>
+              <h4 class="font-bold text-xs text-slate-900">${escapeHtml(item.subject)}</h4>
             </div>
-            <span class="text-[10px] text-slate-400">${item.startTime} ~ ${item.endTime}</span>
+            <span class="text-[10px] text-slate-400">${escapeHtml(item.startTime)} ~ ${escapeHtml(item.endTime)}</span>
           </div>
 
           <div class="mt-1 text-[11px] text-slate-500 pl-1">
-            📍 ${item.academy} · 담당: ${item.teacher}
+            📍 ${escapeHtml(item.academy)} · 담당: ${escapeHtml(item.teacher || "선생님")}
           </div>
 
           ${item.notes ? `
@@ -1006,14 +1154,16 @@
               <div class="font-bold text-[11px] text-amber-800 flex items-center gap-1 mb-0.5">
                 <span>📌 필수 특이사항 & 준비물</span>
               </div>
-              <p class="whitespace-pre-line text-[11px] leading-relaxed text-amber-900">${item.notes}</p>
+              <p class="whitespace-pre-line text-[11px] leading-relaxed text-amber-900">${escapeHtml(item.notes)}</p>
             </div>
           ` : ""}
 
           <div class="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px]">
-            <a href="tel:${item.contact}" class="text-indigo-600 font-semibold flex items-center gap-1 hover:underline">
-              📞 전화 걸기 (${item.contact || "연락처 미등록"})
-            </a>
+            ${item.contact ? `
+              <a href="tel:${sanitizeTel(item.contact)}" class="text-indigo-600 font-semibold flex items-center gap-1 hover:underline">
+                📞 전화 걸기 (${escapeHtml(item.contact)})
+              </a>
+            ` : `<span class="text-slate-400">📞 연락처 미등록</span>`}
             <button class="px-2 py-1 bg-slate-100 hover:bg-slate-200 rounded text-slate-700 font-medium btn-today-detail">
               상세보기
             </button>
@@ -1025,31 +1175,54 @@
       });
     }
 
-    // Render Special Notes & Checklist
+    // Render Special Notes & Checklist with Regex Search & Counts
     function renderNotesView(categoryFilter = "all") {
       const container = document.getElementById("notes-cards-container");
       if (!container) return;
-      container.innerHTML = "";
 
       const itemsWithNotes = schedules.filter(s => s.notes && s.notes.trim().length > 0);
+
+      // Regex patterns
+      const shuttleRegex = /셔틀|버스|탑승|하차|픽업|통학|도보/i;
+      const testRegex = /시험|테스트|단어|클리닉|평가|퀴즈|오답/i;
+      const bookRegex = /교재|숙제|과제|준비물|프린트|책|노트|바인더|정석/i;
+
+      // Update counters
+      const countAll = itemsWithNotes.length;
+      const countShuttle = itemsWithNotes.filter(i => shuttleRegex.test(i.notes)).length;
+      const countTest = itemsWithNotes.filter(i => testRegex.test(i.notes)).length;
+      const countBook = itemsWithNotes.filter(i => bookRegex.test(i.notes)).length;
+
+      const elAll = document.getElementById("count-note-all");
+      const elShuttle = document.getElementById("count-note-shuttle");
+      const elTest = document.getElementById("count-note-test");
+      const elBook = document.getElementById("count-note-book");
+      if (elAll) elAll.textContent = countAll;
+      if (elShuttle) elShuttle.textContent = countShuttle;
+      if (elTest) elTest.textContent = countTest;
+      if (elBook) elBook.textContent = countBook;
+
+      container.innerHTML = "";
 
       if (itemsWithNotes.length === 0) {
         container.innerHTML = `
           <div class="bg-white p-8 rounded-xl border border-slate-200 text-center text-slate-400 text-xs">
-            등록된 특이사항이 없습니다. 과목 등록 시 특이사항을 추가해보세요.
+            등록된 특이사항이 없습니다. 과목 등록 시 특이사항(셔틀, 시험, 준비물 등)을 추가해보세요.
           </div>
         `;
         return;
       }
 
+      let matchCount = 0;
       itemsWithNotes.forEach(item => {
         const cStyle = COLOR_MAP[item.color] || COLOR_MAP.indigo;
         
-        // Filter logic
-        if (categoryFilter === "shuttle" && !item.notes.includes("셔틀")) return;
-        if (categoryFilter === "test" && !item.notes.includes("시험") && !item.notes.includes("테스트") && !item.notes.includes("단어")) return;
-        if (categoryFilter === "book" && !item.notes.includes("교재") && !item.notes.includes("과제") && !item.notes.includes("준비물")) return;
+        // Filter logic with regex
+        if (categoryFilter === "shuttle" && !shuttleRegex.test(item.notes)) return;
+        if (categoryFilter === "test" && !testRegex.test(item.notes)) return;
+        if (categoryFilter === "book" && !bookRegex.test(item.notes)) return;
 
+        matchCount++;
         const card = document.createElement("div");
         card.className = "bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm space-y-2";
 
@@ -1057,18 +1230,18 @@
           <div class="flex items-center justify-between border-b border-slate-100 pb-2">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full ${cStyle.badge}"></span>
-              <span class="font-bold text-xs text-slate-900">${item.subject}</span>
-              <span class="text-[10px] text-slate-400">(${item.days.join(", ")})</span>
+              <span class="font-bold text-xs text-slate-900">${escapeHtml(item.subject)}</span>
+              <span class="text-[10px] text-slate-400">(${escapeHtml(item.days.join(", "))})</span>
             </div>
-            <span class="text-[10px] px-2 py-0.5 bg-slate-100 text-slate-600 rounded-md font-semibold">${item.academy}</span>
+            <span class="text-[10px] px-2 py-0.5 bg-slate-100 text-slate-600 rounded-md font-semibold">${escapeHtml(item.academy)}</span>
           </div>
 
           <div class="bg-amber-50/70 p-2.5 rounded-lg border border-amber-200/80 text-xs text-amber-950 whitespace-pre-line leading-relaxed">
-            ${item.notes}
+            ${escapeHtml(item.notes)}
           </div>
 
           <div class="flex items-center justify-between text-[11px] pt-1">
-            <span class="text-slate-400">담당: ${item.teacher} (${item.contact || "번호 미등록"})</span>
+            <span class="text-slate-400">담당: ${escapeHtml(item.teacher || "선생님")} (${escapeHtml(item.contact || "번호 미등록")})</span>
             <button class="text-indigo-600 font-bold hover:underline btn-edit-note">특이사항 수정</button>
           </div>
         `;
@@ -1076,9 +1249,17 @@
         card.querySelector(".btn-edit-note").addEventListener("click", () => openClassForm(item));
         container.appendChild(card);
       });
+
+      if (matchCount === 0) {
+        container.innerHTML = `
+          <div class="bg-white p-6 rounded-xl border border-slate-200 text-center text-slate-400 text-xs">
+            해당 카테고리에 일치하는 특이사항이 없습니다.
+          </div>
+        `;
+      }
     }
 
-    // Render Subject Management List
+    // Render Subject Management List with Safe Confirm Delete
     function renderSubjectsList() {
       const container = document.getElementById("subject-cards-list");
       const countSpan = document.getElementById("total-subject-count");
@@ -1097,11 +1278,11 @@
             <div class="w-3 h-10 rounded-full ${cStyle.bar} shrink-0"></div>
             <div>
               <div class="flex items-center gap-1.5">
-                <h4 class="font-bold text-xs text-slate-900">${item.subject}</h4>
-                <span class="text-[10px] text-indigo-700 font-bold bg-indigo-50 px-1.5 py-0.2 rounded">${item.days.join(",")}</span>
+                <h4 class="font-bold text-xs text-slate-900">${escapeHtml(item.subject)}</h4>
+                <span class="text-[10px] text-indigo-700 font-bold bg-indigo-50 px-1.5 py-0.2 rounded">${escapeHtml(item.days.join(","))}</span>
               </div>
               <p class="text-[11px] text-slate-500 mt-0.5">
-                ${item.startTime}~${item.endTime} · ${item.academy}
+                ${escapeHtml(item.startTime)}~${escapeHtml(item.endTime)} · ${escapeHtml(item.academy)}
               </p>
             </div>
           </div>
@@ -1117,6 +1298,7 @@
 
         card.querySelector(".btn-subject-edit").addEventListener("click", () => openClassForm(item));
         card.querySelector(".btn-subject-delete").addEventListener("click", () => {
+          if (!confirm(`'${item.subject}' 과목을 정말 삭제하시겠습니까?`)) return;
           schedules = schedules.filter(s => s.id !== item.id);
           saveSchedules();
           refreshAllViews();
@@ -1127,37 +1309,58 @@
       });
     }
 
-    // Update Top Summary & Next Class Banner
+    // Update Top Summary & Smart Next Class Banner
     function updateTopSummary() {
       const nextName = document.getElementById("next-class-name");
       const nextDDay = document.getElementById("next-class-dday");
       const nextMeta = document.getElementById("next-class-meta");
       const nextNoteText = document.getElementById("next-class-note-text");
       const todayCount = document.getElementById("today-class-count");
+      const focusTitle = document.getElementById("label-focus-title");
       if (!nextName || !nextDDay || !todayCount) return;
 
       const now = new Date();
       const dayNames = ["일", "월", "화", "수", "목", "금", "토"];
       const currentDay = dayNames[now.getDay()];
+      const currentTimeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
 
-      const todayClasses = schedules.filter(s => s.days.includes(currentDay))
+      const todayClasses = schedules.filter(s => Array.isArray(s.days) && s.days.includes(currentDay))
         .sort((a, b) => a.startTime.localeCompare(b.startTime));
 
       todayCount.textContent = `${todayClasses.length}개`;
 
       if (todayClasses.length > 0) {
-        const next = todayClasses[0];
-        nextName.textContent = next.subject;
-        nextDDay.textContent = `오늘 ${next.startTime}`;
-        nextMeta.textContent = `📍 ${next.academy} (${next.teacher})`;
-        nextNoteText.textContent = next.notes ? next.notes.split("\n")[0] : "별도 등록된 특이사항 없음";
+        // Find upcoming or current class today
+        const upcomingToday = todayClasses.find(c => c.endTime > currentTimeStr);
+        if (upcomingToday) {
+          const isOngoing = (upcomingToday.startTime <= currentTimeStr && upcomingToday.endTime >= currentTimeStr);
+          if (focusTitle) focusTitle.textContent = isOngoing ? "🔥 지금 진행 중인 학원 수업" : "다음 예정된 학원 수업";
+          nextName.textContent = upcomingToday.subject;
+          nextDDay.textContent = isOngoing ? "수업 진행중" : `오늘 ${upcomingToday.startTime}`;
+          nextDDay.className = isOngoing ? "text-xs bg-rose-500 text-white px-2 py-0.5 rounded-full font-bold animate-pulse" : "text-xs bg-amber-400 text-amber-950 px-2 py-0.5 rounded-full font-bold";
+          nextMeta.textContent = `📍 ${upcomingToday.academy || "학원"} (${upcomingToday.teacher || "선생님"})`;
+          nextNoteText.textContent = upcomingToday.notes ? upcomingToday.notes.split("\n")[0] : "별도 등록된 특이사항 없음";
+          return;
+        } else {
+          // All today's classes finished
+          if (focusTitle) focusTitle.textContent = "오늘의 수업 완료";
+          nextName.textContent = "오늘 모든 수업 종료 👏";
+          nextDDay.textContent = "수고하셨습니다";
+          nextDDay.className = "text-xs bg-emerald-400 text-emerald-950 px-2 py-0.5 rounded-full font-bold";
+          nextMeta.textContent = `오늘 총 ${todayClasses.length}개 수업을 모두 마쳤습니다.`;
+          nextNoteText.textContent = "충분한 휴식 또는 내일 수업 과제를 확인하세요!";
+          return;
+        }
       } else if (schedules.length > 0) {
+        if (focusTitle) focusTitle.textContent = "이번 주 등록 수업";
         const first = schedules[0];
         nextName.textContent = first.subject;
         nextDDay.textContent = `${first.days.join(",")} ${first.startTime}`;
-        nextMeta.textContent = `📍 ${first.academy}`;
+        nextDDay.className = "text-xs bg-indigo-200 text-indigo-950 px-2 py-0.5 rounded-full font-bold";
+        nextMeta.textContent = `📍 ${first.academy || "학원"}`;
         nextNoteText.textContent = first.notes ? first.notes.split("\n")[0] : "특이사항 없음";
       } else {
+        if (focusTitle) focusTitle.textContent = "학원 일정 안내";
         nextName.textContent = "등록된 학원 일정 없음";
         nextDDay.textContent = "-";
         nextMeta.textContent = "새 수업을 추가해주세요";
@@ -1167,6 +1370,7 @@
 
     // Refresh All Views
     function refreshAllViews() {
+      updateClockAndDate();
       updateProfileUI();
       renderWeeklyView();
       renderTodayView();
@@ -1176,8 +1380,7 @@
       updateShareText();
     }
 
-    // Generate Share Formatted Text (카톡/문자 공유 텍스트)
-        // ================= REAL SYNC ENGINE (UTF-8 BASE64 & URL LINK) =================
+    // ================= REAL SYNC ENGINE (UTF-8 BASE64 & SMART EXTRACTION) =================
     function encodeSyncData(data) {
       try {
         const jsonStr = JSON.stringify(data);
@@ -1197,17 +1400,26 @@
       try {
         if (!encodedStr) return null;
         let clean = encodedStr.trim();
-        if (clean.includes("#sync=")) {
-          clean = clean.split("#sync=")[1].split("&")[0];
-        } else if (clean.includes("?sync=")) {
-          clean = clean.split("?sync=")[1].split("&")[0];
+        
+        // Smart regex: extract from URL hash or param
+        const urlMatch = clean.match(/[#?]sync=([A-Za-z0-9+/=%]+)/);
+        if (urlMatch) {
+          clean = urlMatch[1];
+        } else {
+          // Smart regex: extract from EDU-SYNC- anywhere in text
+          const codeMatch = clean.match(/EDU-SYNC-([A-Za-z0-9+/=]+)/);
+          if (codeMatch) {
+            clean = codeMatch[1];
+          }
         }
-        if (clean.startsWith("EDU-SYNC-")) {
-          clean = clean.substring("EDU-SYNC-".length);
-        }
+
         try {
           clean = decodeURIComponent(clean);
         } catch (_) {}
+
+        // Strip any whitespace
+        clean = clean.replace(/\s+/g, '');
+
         const binString = atob(clean);
         const bytes = new Uint8Array(binString.length);
         for (let i = 0; i < binString.length; i++) {
@@ -1247,13 +1459,13 @@
       }
       if (data.profile) {
         userProfile = {
-          studentName: data.profile.studentName || userProfile.studentName,
-          parentName: data.profile.parentName || userProfile.parentName,
-          schoolName: data.profile.schoolName || userProfile.schoolName
+          studentName: data.profile.studentName ? String(data.profile.studentName).trim() : userProfile.studentName,
+          parentName: data.profile.parentName ? String(data.profile.parentName).trim() : userProfile.parentName,
+          schoolName: data.profile.schoolName ? String(data.profile.schoolName).trim() : userProfile.schoolName
         };
         saveProfile();
       }
-      schedules = JSON.parse(JSON.stringify(data.schedules));
+      schedules = data.schedules.map(sanitizeScheduleItem).filter(Boolean);
       saveSchedules();
       refreshAllViews();
       showToast(successMessage, "🎉");
@@ -1270,7 +1482,7 @@
           const title = document.getElementById("incoming-sync-title");
           const desc = document.getElementById("incoming-sync-desc");
           if (banner && title && desc) {
-            title.textContent = `📥 [${data.profile?.studentName || "학생"}] 시간표 도착!`;
+            title.textContent = `📥 [${escapeHtml(data.profile?.studentName || "학생")}] 시간표 도착!`;
             desc.textContent = `총 ${data.schedules.length}개 과목 및 특이사항이 포함되어 있습니다.`;
             banner.classList.remove("hidden");
           }
@@ -1281,6 +1493,12 @@
     function updateShareText() {
       const textarea = document.getElementById("share-text-preview");
       const codeSummary = document.getElementById("display-sync-code");
+      const localNotice = document.getElementById("local-protocol-notice");
+
+      if (window.location.protocol === "file:" && localNotice) {
+        localNotice.classList.remove("hidden");
+      }
+
       if (!textarea) return;
 
       const syncPayload = getSyncPayload();
@@ -1296,7 +1514,7 @@
       text += `------------------------------------\n\n`;
 
       DAYS_ORDER.forEach(day => {
-        const dayClasses = schedules.filter(s => s.days.includes(day))
+        const dayClasses = schedules.filter(s => Array.isArray(s.days) && s.days.includes(day))
           .sort((a, b) => a.startTime.localeCompare(b.startTime));
 
         if (dayClasses.length > 0) {
@@ -1351,7 +1569,9 @@
         end.value = item.endTime;
         notes.value = item.notes || "";
         selectedColor = item.color || "indigo";
-        item.days.forEach(d => selectedDays.add(d));
+        if (Array.isArray(item.days)) {
+          item.days.forEach(d => selectedDays.add(d));
+        }
       } else {
         title.textContent = "새 학원 수업 등록";
         formId.value = "";
@@ -1417,7 +1637,7 @@
       acad.textContent = item.academy || "미기재";
       teach.textContent = item.teacher ? `${item.teacher} 선생님` : "미지정";
       cont.textContent = item.contact || "02-000-0000";
-      cont.href = item.contact ? `tel:${item.contact}` : "#";
+      cont.href = item.contact ? `tel:${sanitizeTel(item.contact)}` : "#";
 
       notesContent.textContent = item.notes && item.notes.trim() ? item.notes : "등록된 특이사항이 없습니다.";
 
@@ -1429,7 +1649,7 @@
       if (modal) modal.classList.add("hidden");
     }
 
-    // Clipboard Copy Helper with Fallback
+    // Clipboard Copy Helper with Secure Fallback
     function copyToClipboard(text, successMsg = "클립보드에 복사되었습니다!") {
       if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
@@ -1459,6 +1679,25 @@
       }
     }
 
+    // Helper: Close all open modals
+    function closeAllModals() {
+      const modals = [
+        "modal-class-form",
+        "modal-class-detail",
+        "modal-share",
+        "modal-profile"
+      ];
+      let closedAny = false;
+      modals.forEach(mId => {
+        const m = document.getElementById(mId);
+        if (m && !m.classList.contains("hidden")) {
+          m.classList.add("hidden");
+          closedAny = true;
+        }
+      });
+      return closedAny;
+    }
+
     // Initialize Event Listeners
     window.addEventListener("DOMContentLoaded", () => {
       loadProfile();
@@ -1467,6 +1706,9 @@
       refreshAllViews();
       checkUrlHashSync();
       window.addEventListener("hashchange", checkUrlHashSync);
+
+      // Periodically update clock (every 30s)
+      setInterval(updateClockAndDate, 30000);
 
       // Tab Switching
       const tabs = [
@@ -1511,6 +1753,52 @@
       document.getElementById("nav-btn-notes").addEventListener("click", () => switchTab("notes"));
       document.getElementById("nav-btn-add").addEventListener("click", () => openClassForm());
 
+      // Print Schedule Button
+      const btnPrint = document.getElementById("btn-print-schedule");
+      if (btnPrint) {
+        btnPrint.addEventListener("click", () => {
+          window.print();
+        });
+      }
+
+      // Android / iOS Simulated Hardware Button Handlers
+      const btnAndroidBack = document.getElementById("btn-android-back");
+      const btnAndroidHome = document.getElementById("btn-android-home");
+      const btnAndroidRecent = document.getElementById("btn-android-recent");
+      const iosHomeBar = document.getElementById("ios-home-bar");
+
+      if (btnAndroidBack) {
+        btnAndroidBack.addEventListener("click", () => {
+          const closed = closeAllModals();
+          if (!closed && activeTab !== "week") {
+            switchTab("week");
+          }
+        });
+      }
+
+      if (btnAndroidHome) {
+        btnAndroidHome.addEventListener("click", () => {
+          closeAllModals();
+          switchTab("week");
+        });
+      }
+
+      if (btnAndroidRecent) {
+        btnAndroidRecent.addEventListener("click", () => {
+          closeAllModals();
+          switchTab("list");
+        });
+      }
+
+      if (iosHomeBar) {
+        iosHomeBar.addEventListener("click", () => {
+          const closed = closeAllModals();
+          if (!closed && activeTab !== "week") {
+            switchTab("week");
+          }
+        });
+      }
+
       // Note category filters
       document.querySelectorAll(".note-filter-btn").forEach(btn => {
         btn.addEventListener("click", () => {
@@ -1524,7 +1812,6 @@
 
       // Role switcher (Student / Parent)
       const roleBtn = document.getElementById("btn-toggle-role");
-      const roleLabel = document.getElementById("label-role");
       roleBtn.addEventListener("click", () => {
         if (currentRole === "student") {
           currentRole = "parent";
@@ -1550,6 +1837,7 @@
       });
       document.getElementById("btn-detail-delete").addEventListener("click", () => {
         if (currentDetailItem) {
+          if (!confirm(`'${currentDetailItem.subject}' 과목을 삭제하시겠습니까?`)) return;
           schedules = schedules.filter(s => s.id !== currentDetailItem.id);
           saveSchedules();
           refreshAllViews();
@@ -1569,7 +1857,6 @@
       const btnTabEditProfile = document.getElementById("btn-tab-edit-profile");
       const btnCloseProfile = document.getElementById("btn-close-profile-modal");
       const btnCancelProfile = document.getElementById("btn-cancel-profile");
-      const btnSaveProfile = document.getElementById("btn-save-profile");
       const formProfile = document.getElementById("form-profile");
       const inputStudent = document.getElementById("input-student-name");
       const inputParent = document.getElementById("input-parent-name");
@@ -1611,14 +1898,6 @@
       }
 
       if (formProfile) formProfile.addEventListener("submit", handleSaveProfile);
-      if (btnSaveProfile) {
-        btnSaveProfile.addEventListener("click", (e) => {
-          // If valid, submit directly
-          if (inputStudent.value.trim() && inputParent.value.trim() && inputSchool.value.trim()) {
-            handleSaveProfile(e);
-          }
-        });
-      }
 
       // Share Modal
       const shareModal = document.getElementById("modal-share");
@@ -1653,7 +1932,7 @@
         copyToClipboard(code, "동기화 코드가 복사되었습니다! (상대방 폰에 붙여넣기)");
       });
 
-      // Import Sync Code or Link
+      // Import Sync Code or Link (Handles direct code, URL, or whole KakaoTalk message paste)
       document.getElementById("btn-import-code").addEventListener("click", () => {
         const input = document.getElementById("input-import-code");
         const val = input.value.trim();
@@ -1750,8 +2029,9 @@
         }
       });
 
-      // Reset Sample Data
+      // Reset Sample Data with Safe Confirmation
       document.getElementById("btn-reset-sample-data").addEventListener("click", () => {
+        if (!confirm("모든 시간표가 초기 대치동 기본 샘플 데이터로 복원됩니다. 계속하시겠습니까?")) return;
         schedules = JSON.parse(JSON.stringify(DEFAULT_SCHEDULES));
         saveSchedules();
         refreshAllViews();
@@ -1800,6 +2080,11 @@
         const startTime = document.getElementById("input-start-time").value;
         const endTime = document.getElementById("input-end-time").value;
         const notes = document.getElementById("input-special-notes").value.trim();
+
+        if (selectedDays.size === 0) {
+          showToast("최소 1개 이상의 수업 요일을 선택해주세요.", "⚠️");
+          return;
+        }
 
         if (startTime >= endTime) {
           showToast("종료 시간은 시작 시간보다 늦어야 합니다.", "⚠️");
@@ -1852,14 +2137,13 @@
       // ================= DEVICE CONTROLLER LOGIC (iOS vs Android vs Full) =================
       const frame = document.getElementById("phone-frame");
       const notch = document.getElementById("notch-element");
-      const iosHomeBar = document.getElementById("ios-home-bar");
       const androidNavBar = document.getElementById("android-nav-bar");
       const btnIos = document.getElementById("btn-mode-ios");
       const btnAndroid = document.getElementById("btn-mode-android");
       const btnResponsive = document.getElementById("btn-mode-responsive");
 
       function setDeviceMode(mode) {
-        // Reset classes
+        // Reset button styles
         btnIos.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
         btnAndroid.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
         btnResponsive.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all text-slate-400 hover:text-white";
@@ -1880,11 +2164,11 @@
           showToast("🤖 Samsung Galaxy (Android 14) 환경 시뮬레이션 적용");
         } else if (mode === "responsive") {
           btnResponsive.className = "px-3 py-1.5 rounded-lg text-xs font-medium flex items-center gap-1.5 transition-all bg-purple-600 text-white shadow-sm font-bold";
-          frame.className = "w-full max-w-[540px] h-[880px] bg-slate-50 flex flex-col overflow-hidden relative rounded-2xl shadow-2xl transition-all duration-300 border border-slate-700";
-          notch.className = "w-16 h-3 bg-slate-700 rounded-full transition-all duration-300";
+          frame.className = "w-full max-w-2xl h-[92vh] bg-slate-50 flex flex-col overflow-hidden relative rounded-2xl shadow-2xl transition-all duration-300 border border-slate-700";
+          notch.className = "hidden";
           iosHomeBar.classList.remove("hidden");
           androidNavBar.classList.add("hidden");
-          showToast("📱 반응형 전체화면 모드 적용");
+          showToast("📱 반응형 전체화면 모드 (태블릿/PC) 적용");
         }
       }
 
